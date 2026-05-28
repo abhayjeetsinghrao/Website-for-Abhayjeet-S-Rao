@@ -427,6 +427,35 @@
     }
     @media(max-width:600px){ .footer-top{ flex-direction:column; gap:2.5rem; } .footer-brand-col{ flex:unset; } }
 
+    /* ══ DISCLAIMER BANNER ══════════════════════════════════ */
+    .disclaimer-banner {
+      background: #0a1a3a; border-top: 2px solid var(--blue);
+      padding: 1.4rem 6vw; color: rgba(255,255,255,.6);
+      font-size: .72rem; line-height: 1.75;
+    }
+    .disclaimer-banner-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: flex-start; gap: 1.5rem;
+    }
+    .disclaimer-label {
+      flex-shrink: 0; font-size: .55rem; font-weight: 700;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--blue); padding-top: .15rem;
+    }
+    .disclaimer-text { flex: 1; }
+    .disclaimer-text strong { color: rgba(255,255,255,.85); font-weight: 600; }
+    .disclaimer-close {
+      flex-shrink: 0; background: none; border: 1px solid rgba(255,255,255,.2);
+      color: rgba(255,255,255,.4); font-size: .7rem; padding: .2rem .6rem;
+      cursor: pointer; border-radius: 2px; align-self: flex-start;
+      transition: all .2s;
+    }
+    .disclaimer-close:hover { border-color: rgba(255,255,255,.5); color: rgba(255,255,255,.8); }
+    @media(max-width:600px){
+      .disclaimer-banner-inner { flex-direction: column; gap: .8rem; }
+      .disclaimer-close { align-self: flex-end; }
+    }
+
     /* ══ WHATSAPP FLOAT ══════════════════════════════════════ */
     .wa-float {
       position:fixed; bottom:2rem; right:2rem; z-index:800;
@@ -1120,6 +1149,23 @@
   </div>
 </section>
 
+<!-- ══ DISCLAIMER ══════════════════════════════════════ -->
+<div class="disclaimer-banner" id="disclaimerBanner">
+  <div class="disclaimer-banner-inner">
+    <span class="disclaimer-label">Disclaimer</span>
+    <p class="disclaimer-text">
+      <strong>Bar Council of India Compliance Notice.</strong>
+      This website has been created solely for informational purposes and does not constitute an advertisement, solicitation, or invitation to retain legal services.
+      Under the <strong>Bar Council of India Rules, 1964 (Rule 36)</strong>, advocates are prohibited from advertising or soliciting work, either directly or indirectly.
+      The information contained herein is not intended to be, and should not be construed as, legal advice on any matter.
+      Transmission of information through this website does not create an advocate–client relationship.
+      Readers are advised to seek independent legal counsel before acting on any information contained in these pages.
+      The testimonials, mandates, and matters referenced are included solely to provide factual background and are not intended to create any impression of past results or guaranteed outcomes.
+    </p>
+    <button class="disclaimer-close" onclick="dismissDisclaimer()" aria-label="Dismiss">✕ Dismiss</button>
+  </div>
+</div>
+
 <!-- ══ FOOTER ════════════════════════════════════════════ -->
 <footer>
   <div class="footer-top">
@@ -1180,6 +1226,16 @@
       this.classList.add('active');
     });
   });
+
+  /* Disclaimer dismiss */
+  function dismissDisclaimer(){
+    document.getElementById('disclaimerBanner').style.display = 'none';
+    try { sessionStorage.setItem('disclaimerDismissed','1'); } catch(e){}
+  }
+  if(sessionStorage.getItem('disclaimerDismissed')){
+    var b = document.getElementById('disclaimerBanner');
+    if(b) b.style.display = 'none';
+  }
 
   /* Contact form */
   function handleSubmit(e){
