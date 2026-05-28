@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23001E62'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='12' font-weight='700' fill='white'>ASR</text></svg>"/>
   <style>
     /* ══ TOKENS ════════════════════════════════════════════ */
     :root {
@@ -234,7 +235,51 @@
     .section-lead.light { color:rgba(255,255,255,.55); }
 
     /* ══ ABOUT ═══════════════════════════════════════════════ */
-    .about-grid { display:grid; grid-template-columns:3fr 2fr; gap:5rem; align-items:start; }
+    .about-grid { display:grid; grid-template-columns:1fr 320px; gap:5rem; align-items:start; }
+    .about-photo {
+      width:100%; aspect-ratio:3/4; max-height:380px;
+      background: var(--navy);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      position:relative; overflow:hidden; margin-bottom:1.5rem;
+      border-top:4px solid var(--blue);
+    }
+    .about-photo-monogram {
+      font-size:4rem; font-weight:700; color:rgba(255,255,255,.18);
+      letter-spacing:-.02em; line-height:1; font-family:Georgia,serif;
+      position:relative; z-index:1;
+    }
+    .about-photo-name {
+      font-size:.58rem; letter-spacing:.22em; text-transform:uppercase;
+      color:rgba(255,255,255,.35); font-weight:600; margin-top:.8rem;
+      position:relative; z-index:1;
+    }
+    .about-photo::before {
+      content:''; position:absolute; bottom:-40px; right:-40px;
+      width:200px; height:200px; border-radius:50%;
+      border:1px solid rgba(255,255,255,.07);
+    }
+    .about-photo-placeholder {
+      font-size:.62rem; color:rgba(255,255,255,.25); letter-spacing:.1em;
+      text-transform:uppercase; margin-top:1.5rem; position:relative; z-index:1;
+    }
+    .about-courts {
+      background:var(--off); border:1px solid var(--rule); border-left:3px solid var(--navy);
+      padding:1.2rem 1.4rem;
+    }
+    .about-courts-hd {
+      font-size:.55rem; letter-spacing:.2em; text-transform:uppercase;
+      color:var(--blue); font-weight:700; margin-bottom:.75rem;
+    }
+    .about-courts-list { list-style:none; }
+    .about-courts-list li {
+      font-size:.78rem; color:var(--mid); padding:.3rem 0;
+      border-bottom:1px solid var(--rule); display:flex; align-items:center; gap:.6rem;
+    }
+    .about-courts-list li:last-child { border-bottom:none; }
+    .about-courts-list li::before {
+      content:''; width:5px; height:5px; border-radius:50%;
+      background:var(--navy); flex-shrink:0;
+    }
     .about-body p { color:var(--mid); font-size:.95rem; line-height:1.9; margin-bottom:1.2rem; }
     .about-body p:last-child{ margin-bottom:0; }
     .about-body strong { color:var(--ink); font-weight:600; }
@@ -286,6 +331,20 @@
       .practice-item:nth-last-child(-n+2){ border-bottom:1px solid var(--rule); }
       .practice-item:last-child{ border-bottom:none; }
     }
+
+    /* ══ MANDATES FILTER ════════════════════════════════════ */
+    .mandates-filter {
+      display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1.8rem;
+    }
+    .mf-btn {
+      padding:.38rem 1rem; font-size:.62rem; font-weight:700;
+      letter-spacing:.1em; text-transform:uppercase; cursor:pointer;
+      border:1px solid var(--rule); background:var(--white); color:var(--mid);
+      transition:all var(--t); font-family:var(--sans);
+    }
+    .mf-btn:hover { border-color:var(--navy); color:var(--navy); }
+    .mf-btn.active { background:var(--navy); color:var(--white); border-color:var(--navy); }
+    .mandates-wrap[data-hidden] { display:none; }
 
     /* ══ MANDATES — CC table/list style ═════════════════════ */
     .mandates-wrap {
@@ -565,6 +624,20 @@
       .insights-grid-lower{ grid-template-columns:1fr; }
     }
 
+    /* ══ INSIGHTS SHOW MORE ══════════════════════════════════ */
+    .insight-card.hidden-card { display:none; }
+    .insights-show-more {
+      margin-top:1.8rem; text-align:center;
+    }
+    .btn-show-more {
+      display:inline-flex; align-items:center; gap:.5rem;
+      padding:.7rem 2rem; font-size:.66rem; font-weight:700;
+      letter-spacing:.1em; text-transform:uppercase; cursor:pointer;
+      border:1.5px solid var(--navy); background:var(--white); color:var(--navy);
+      font-family:var(--sans); transition:all var(--t);
+    }
+    .btn-show-more:hover { background:var(--navy); color:var(--white); }
+
     /* ══ FIND OUT MORE LINK ══════════════════════════════════ */
     .fom {
       display:inline-flex; align-items:center; gap:.45rem;
@@ -792,21 +865,23 @@
         </p>
       </div>
       <div class="stats-col reveal d1">
-        <div class="stat">
-          <div class="stat-n">10+</div>
-          <div class="stat-l">Years of Active Practice</div>
+        <div class="about-photo">
+          <div class="about-photo-monogram">ASR</div>
+          <div class="about-photo-name">Abhayjeet Singh Rao</div>
+          <div class="about-photo-placeholder">Add your photo here</div>
         </div>
-        <div class="stat">
-          <div class="stat-n">150+</div>
-          <div class="stat-l">Clients Represented</div>
-        </div>
-        <div class="stat">
-          <div class="stat-n">7</div>
-          <div class="stat-l">Practice Areas</div>
-        </div>
-        <div class="stat">
-          <div class="stat-n">4+</div>
-          <div class="stat-l">Countries of Operation</div>
+        <div class="about-courts">
+          <div class="about-courts-hd">Courts &amp; Tribunals</div>
+          <ul class="about-courts-list">
+            <li>Supreme Court of India</li>
+            <li>Delhi High Court</li>
+            <li>Commercial Division — High Court of England &amp; Wales</li>
+            <li>District &amp; Sessions Courts, Delhi NCR</li>
+            <li>Haryana RERA Authority</li>
+            <li>MSME Facilitation Council</li>
+            <li>Consumer Disputes Redressal Commission</li>
+            <li>Juvenile Justice Board</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -893,8 +968,18 @@
       <p class="section-lead reveal">A selection of matters conducted over ten years of active practice. All mandates are presented without identifying particulars.</p>
     </div>
 
-    <div class="mandates-wrap reveal">
-      <div class="m-col">
+    <div class="mandates-filter reveal">
+      <button class="mf-btn active" onclick="filterMandates('all',this)">All</button>
+      <button class="mf-btn" onclick="filterMandates('criminal',this)">Criminal Defence</button>
+      <button class="mf-btn" onclick="filterMandates('commercial',this)">Commercial &amp; NI Act</button>
+      <button class="mf-btn" onclick="filterMandates('arbitration',this)">Arbitration &amp; Real Estate</button>
+      <button class="mf-btn" onclick="filterMandates('family',this)">Family &amp; Matrimonial</button>
+      <button class="mf-btn" onclick="filterMandates('consumer',this)">Consumer &amp; Regulatory</button>
+      <button class="mf-btn" onclick="filterMandates('international',this)">International</button>
+    </div>
+
+    <div class="mandates-wrap reveal" id="mandates-wrap-1">
+      <div class="m-col" data-category="criminal">
         <div class="m-col-head">Criminal Defence</div>
         <div class="m-item">Appeared as lead counsel in a sessions trial involving a capital charge of murder, with the accused additionally charged for criminal conspiracy, abetment with common intention, and offences under the Arms Act. Managed case strategy, filed the bail application before the Additional Sessions Judge, and attended all substantive hearing dates.</div>
         <div class="m-item">Represented one of fourteen co-accused in a complex sessions trial for murder, abduction, rioting with deadly weapons, and offences under the Arms Act. Developed an individualised defence strategy to distinguish the client's role and prepared detailed written submissions on the adequacy of the prosecution's evidence.</div>
@@ -912,7 +997,7 @@
         <div class="m-item">Represented the accused across bail and initial proceedings in a matter involving criminal breach of trust, cheating, and criminal conspiracy in a commercial context, advising on the principal defences available at trial.</div>
       </div>
 
-      <div class="m-col">
+      <div class="m-col" data-category="commercial">
         <div class="m-col-head">Commercial &amp; NI Act</div>
         <div class="m-item">Conducted the full trial as Litigation Counsel in a Section 138 Negotiable Instruments Act complaint — from service of process, examination, cross-examination, and defence evidence through to final arguments — and subsequently filed a criminal appeal before the Additional Sessions Judge challenging the trial court's findings on appreciation of evidence.</div>
         <div class="m-item">Appeared for a corporate complainant in the automotive retail sector in a Section 138 NI Act matter. In a concurrent transactional retainer for the same client, drafted a detailed financing agreement governing a multi-crore working capital arrangement with repayment schedule, default provisions, and security mechanisms.</div>
@@ -929,7 +1014,7 @@
         <div class="m-item">Advised a corporate client on available remedies in a delayed-payment dispute, co-ordinating pre-litigation demand correspondence and advising on the procedure for referral to the MSME Facilitation Council.</div>
       </div>
 
-      <div class="m-col">
+      <div class="m-col" data-category="arbitration">
         <div class="m-col-head">Arbitration &amp; Real Estate</div>
         <div class="m-item">Drafted and filed a Section 9 petition under the Arbitration and Conciliation Act, 1996 before the Additional District Judge on behalf of an ed-tech company, seeking urgent pre-arbitral interim relief against a university respondent following its unilateral breach of a commercial services agreement.</div>
         <div class="m-item">Filed a Section 11 petition under the Arbitration and Conciliation Act, 1996 before the High Court, seeking judicial appointment of an arbitrator following failure of the contractually agreed appointment mechanism, advancing arguments on the validity of the arbitration clause.</div>
@@ -945,8 +1030,8 @@
       </div>
     </div>
 
-    <div class="mandates-wrap reveal" style="margin-top:1px;">
-      <div class="m-col">
+    <div class="mandates-wrap reveal" id="mandates-wrap-2" style="margin-top:1px;">
+      <div class="m-col" data-category="family">
         <div class="m-col-head">Family &amp; Matrimonial</div>
         <div class="m-item">Filed and argued a guardianship petition under Sections 7, 10, 12, and 25 of the Guardians and Wards Act, 1890 before the Additional Principal Judge, Family Court, seeking appointment of the petitioner as guardian of a minor child and custody. Conducted examination-in-chief of the petitioner at the evidence stage.</div>
         <div class="m-item">Appeared for the petitioner in proceedings under the Protection of Women from Domestic Violence Act, 2005, filing applications for protection orders and residence orders before the competent Magistrate, and advising on the civil and criminal remedies concurrently available.</div>
@@ -958,7 +1043,7 @@
         <div class="m-item">Drafted a Family Settlement Deed for parties in a contested property and investment dispute, documenting the negotiated allocation of immoveable properties, business interests, and financial instruments in a form suitable for registration.</div>
       </div>
 
-      <div class="m-col">
+      <div class="m-col" data-category="consumer">
         <div class="m-col-head">Consumer &amp; Regulatory</div>
         <div class="m-item">Drafted and filed a written statement on behalf of a corporate respondent before the District Consumer Disputes Redressal Commission under Section 35 of the Consumer Protection Act, 2019 — raising preliminary objections on maintainability and limitation, and traversing the merits of the alleged deficiency of service.</div>
         <div class="m-item">Appeared for officers and managers of an industrial enterprise in a regulatory prosecution by the State Pollution Control Board before the Special Environment Court under the Environment Protection Act, 1986, filing submissions opposing remand and advising on individual criminal liability for officers of a company in environmental offences.</div>
@@ -969,7 +1054,7 @@
         <div class="m-item">Filed books of authority before the Judicial Magistrate in a private complaint, placing on record leading precedents on the standard for issuance of process under Section 204 Cr.PC and the Magistrate's obligation to apply his mind at the pre-summoning stage.</div>
       </div>
 
-      <div class="m-col">
+      <div class="m-col" data-category="international">
         <div class="m-col-head">International &amp; Transactional</div>
         <div class="m-col-sub">Aviation Finance</div>
         <div class="m-item">Conducted comprehensive reviews of aircraft operating lease agreements, trust agreements, and leaseback arrangements in connection with the transfer and financing of commercial aircraft across multiple jurisdictions, ensuring satisfaction of all conditions precedent and subsequent to closing.</div>
@@ -1192,24 +1277,12 @@
   </div>
 </div>
 
-      
-      <div class="insight-card">
-  <span class="ic-tag">Employment Law · Dismissal Procedures</span>
-  <div class="ic-date">28 May 2026</div>
-  <h3 class="ic-title">Tribunals Must Adhere to Procedural Fairness in Dismissal Cases</h3>
-  <div class="ic-citation">Ananda Kumar Ghosh v. State Of West Bengal And Others — (2011) 9 SCC 79</div>
-  <div class="ic-body">
-    In Ananda Kumar Ghosh v. State Of West Bengal And Others, the Supreme Court examined the dismissal of an employee by a state authority on grounds of alleged involvement in a criminal case. The petitioner, Ananda Kumar Ghosh, had been dismissed following an inquiry based on charges linked to an incident dated April 4. He challenged his dismissal before the Tribunal, which upheld the state's action without granting relief. The central legal question pertained to whether the procedures employed by the Tribunal in adjudicating the matter were consistent with principles of natural justice and whether the dismissal was substantively and procedurally warranted under statutory and jurisprudential standards governing public employment and disciplinary proceedings.
-    <br/><br/>
-    The Supreme Court, in its reasoning, emphasized the indispensability of adhering to natural justice principles in disciplinary proceedings, thereby laying down a benchmark for future cases. The judgment underscored that a dismissal rooted in criminal allegations necessitates scrupulous observance of fair hearing and unbiased adjudication. The Court noted that the Tribunal had erred by not critically assessing the sufficiency of evidence and procedural appropriateness employed by the state authority. The decision established that dismissals affecting employment rights must not only conform to statutory mandates but also satisfy the broader demands of equitable treatment and fairness ingrained in employment jurisprudence as recognized in Union of India v. Tulsiram Patel — (1985) 3 SCC 398.
-  </div>
-  <div class="ic-provisions">
-    <span class="ic-prov">S. 311 IPC</span>
-    <span class="ic-prov">S. 197 CrPC</span>
-  </div>
-</div>
 
       </div><!-- end .insights-grid-lower -->
+
+    <div class="insights-show-more" id="insightsShowMore">
+      <button class="btn-show-more" onclick="showMoreInsights()">Show Earlier Insights ↓</button>
+    </div>
 
     <div class="insights-note reveal">
       <strong>Published every Tuesday and Friday.</strong> This column covers significant Supreme Court decisions in criminal law — bail jurisprudence, evidence, sentencing, and procedure. Each entry is prepared by Abhayjeet Singh Rao and is intended for informational purposes only. Nothing published here constitutes legal advice.
@@ -1255,7 +1328,7 @@
         </div>
       </div>
 
-      <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xpwzgvkd" method="POST" onsubmit="handleSubmit(event)">
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="fname">Full Name</label>
@@ -1330,7 +1403,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2025 Abhayjeet Singh Rao · All Rights Reserved</span>
+    <span>&copy; 2026 Abhayjeet Singh Rao · All Rights Reserved</span>
     <span style="text-transform:uppercase;letter-spacing:.1em;">Counsel · New Delhi</span>
   </div>
 </footer>
@@ -1404,6 +1477,37 @@
     counterObserver.observe(el);
   });
 
+  /* ── Mandates filter ── */
+  function filterMandates(cat, btn) {
+    document.querySelectorAll('.mf-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.m-col[data-category]').forEach(col => {
+      col.style.display = (cat === 'all' || col.dataset.category === cat) ? '' : 'none';
+    });
+    document.querySelectorAll('.mandates-wrap').forEach(wrap => {
+      const visible = [...wrap.querySelectorAll('.m-col[data-category]')].some(c => c.style.display !== 'none');
+      wrap.style.display = visible ? '' : 'none';
+    });
+  }
+
+  /* ── Insights show more ── */
+  (function(){
+    const grid = document.querySelector('.insights-grid-lower');
+    if(!grid) return;
+    const cards = [...grid.querySelectorAll('.insight-card')];
+    const LIMIT = 3;
+    cards.forEach((c, i) => { if(i >= LIMIT) c.classList.add('hidden-card'); });
+    if(cards.length <= LIMIT) {
+      const btn = document.getElementById('insightsShowMore');
+      if(btn) btn.style.display = 'none';
+    }
+  })();
+
+  function showMoreInsights() {
+    document.querySelectorAll('.insight-card.hidden-card').forEach(c => c.classList.remove('hidden-card'));
+    document.getElementById('insightsShowMore').style.display = 'none';
+  }
+
   /* Disclaimer dismiss */
   function dismissDisclaimer(){
     document.getElementById('disclaimerBanner').style.display = 'none';
@@ -1414,11 +1518,29 @@
     if(b) b.style.display = 'none';
   }
 
-  /* Contact form */
-  function handleSubmit(e){
+  /* Contact form — Formspree */
+  async function handleSubmit(e){
     e.preventDefault();
-    document.getElementById('formOk').style.display = 'block';
-    e.target.querySelectorAll('input,textarea,button').forEach(el => el.disabled = true);
+    const form = e.target;
+    const btn = form.querySelector('.form-btn');
+    btn.textContent = 'Sending…'; btn.disabled = true;
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if(res.ok){
+        document.getElementById('formOk').style.display = 'block';
+        form.querySelectorAll('input,textarea,button').forEach(el => el.disabled = true);
+      } else {
+        btn.textContent = 'Send Message'; btn.disabled = false;
+        alert('There was a problem sending your message. Please email directly at abhayjeetrao@gmail.com');
+      }
+    } catch(err){
+      btn.textContent = 'Send Message'; btn.disabled = false;
+      alert('Network error. Please email directly at abhayjeetrao@gmail.com');
+    }
   }
 </script>
 </body>
