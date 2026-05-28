@@ -820,13 +820,13 @@
 <!-- ══ EXPERTISE STRIP ════════════════════════════════════ -->
 <div class="expertise-strip">
   <div class="expertise-strip-inner">
-    <div class="es-item active">Criminal Defence</div>
-    <div class="es-item">Corporate &amp; Commercial</div>
-    <div class="es-item">Aviation Finance</div>
-    <div class="es-item">Arbitration</div>
-    <div class="es-item">Family &amp; Matrimonial</div>
-    <div class="es-item">Real Estate</div>
-    <div class="es-item">International Law</div>
+    <div class="es-item active" data-filter="criminal">Criminal Defence</div>
+    <div class="es-item" data-filter="commercial">Corporate &amp; Commercial</div>
+    <div class="es-item" data-filter="international">Aviation Finance</div>
+    <div class="es-item" data-filter="arbitration">Arbitration</div>
+    <div class="es-item" data-filter="family">Family &amp; Matrimonial</div>
+    <div class="es-item" data-filter="arbitration">Real Estate</div>
+    <div class="es-item" data-filter="international">International Law</div>
   </div>
 </div>
 
@@ -875,7 +875,6 @@
           <ul class="about-courts-list">
             <li>Supreme Court of India</li>
             <li>Delhi High Court</li>
-            <li>Commercial Division — High Court of England &amp; Wales</li>
             <li>District &amp; Sessions Courts, Delhi NCR</li>
             <li>Haryana RERA Authority</li>
             <li>MSME Facilitation Council</li>
@@ -1424,11 +1423,22 @@
   }, {threshold:.07});
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  /* Expertise strip active */
+  /* Expertise strip — click scrolls to mandates and triggers filter */
   document.querySelectorAll('.es-item').forEach(el => {
+    el.style.cursor = 'pointer';
     el.addEventListener('click', function(){
       document.querySelectorAll('.es-item').forEach(e => e.classList.remove('active'));
       this.classList.add('active');
+      const cat = this.dataset.filter;
+      if(cat){
+        const matchBtn = [...document.querySelectorAll('.mf-btn')].find(b =>
+          b.textContent.trim().toLowerCase().includes(cat === 'international' ? 'international' :
+          cat === 'criminal' ? 'criminal' : cat === 'commercial' ? 'commercial' :
+          cat === 'arbitration' ? 'arbitration' : cat === 'family' ? 'family' : cat)
+        );
+        if(matchBtn) filterMandates(cat, matchBtn);
+        document.getElementById('mandates').scrollIntoView({behavior:'smooth', block:'start'});
+      }
     });
   });
 
