@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhayjeet Singh Rao — Advocate &amp; Solicitor</title>
+  <meta name="description" content="Advocate with 10+ years in Indian courts and international commercial practice. Criminal defence, corporate litigation, aviation finance, and cross-border advisory."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ══ TOKENS ════════════════════════════════════════════ */
+    :root {
+      --navy:    #001E62;   /* CC deep navy */
+      --navy2:   #002B8A;
+      --blue:    #0050B3;   /* mid-blue accent */
+      --blue2:   #003D8F;
+      --white:   #FFFFFF;
+      --off:     #F4F6F9;
+      --ink:     #1A1A1A;
+      --mid:     #555555;
+      --light:   #888888;
+      --rule:    #D8DCE6;
+      --rule2:   #BEC4D4;
+      --wa:      #25D366;
+
+      --sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      --ease: cubic-bezier(.4,0,.2,1);
+      --t:    .25s;
+    }
+
+    /* ══ RESET ═════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { background: var(--white); color: var(--ink); font-family: var(--sans); font-weight: 400; line-height: 1.6; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ══ SCROLL REVEAL ══════════════════════════════════════ */
+    .reveal    { opacity:0; transform:translateY(20px); transition:opacity .65s var(--ease), transform .65s var(--ease); }
+    .reveal.in { opacity:1; transform:none; }
+    .d1{transition-delay:.05s} .d2{transition-delay:.1s} .d3{transition-delay:.15s}
+    .d4{transition-delay:.2s}  .d5{transition-delay:.25s} .d6{transition-delay:.3s}
+
+    /* ══ TOP BAR ════════════════════════════════════════════ */
+    .top-bar {
+      background: var(--navy); color: rgba(255,255,255,.65);
+      padding:0 5vw; height:auto; min-height:36px;
+      display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:.5rem;
+      font-size:.65rem; letter-spacing:.06em;
+      padding-top:.45rem; padding-bottom:.45rem;
+    }
+    .top-bar a { color:rgba(255,255,255,.65); transition:color var(--t); white-space:nowrap; }
+    .top-bar a:hover { color:var(--white); }
+    .top-bar-left { white-space:nowrap; }
+    .top-bar-links { display:flex; gap:1.4rem; flex-wrap:wrap; align-items:center; }
+
+    /* ══ NAV ════════════════════════════════════════════════ */
+    nav {
+      position: sticky; top:0; z-index:900;
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      display:flex; align-items:stretch; justify-content:space-between;
+      padding: 0 5vw; height: 72px;
+    }
+    .nav-brand {
+      display:flex; align-items:center; gap:0; text-decoration:none;
+    }
+    .nav-brand-wrap { display:flex; flex-direction:column; gap:2px; }
+    .nav-brand-name {
+      font-size:1rem; font-weight:700; color:var(--navy);
+      letter-spacing:-.01em; line-height:1.1;
+    }
+    .nav-brand-sub {
+      font-size:.58rem; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--light); font-weight:500;
+    }
+    .nav-links { display:flex; list-style:none; align-items:stretch; }
+    .nav-links li { display:flex; align-items:stretch; }
+    .nav-links a {
+      display:flex; align-items:center; padding:0 1.1rem;
+      font-size:.7rem; letter-spacing:.04em; font-weight:500;
+      color: var(--mid);
+      border-bottom:3px solid transparent;
+      transition: color var(--t), border-color var(--t);
+    }
+    .nav-links a:hover { color:var(--navy); border-bottom-color:var(--navy); }
+    .nav-cta {
+      display:flex !important; align-items:center !important;
+      margin:auto 0 auto 1rem;
+      background: var(--navy); color: var(--white) !important;
+      padding:.5rem 1.4rem !important; border-bottom:none !important;
+      font-size:.68rem !important; font-weight:600 !important;
+      letter-spacing:.06em !important; text-transform:uppercase;
+      transition: background var(--t) !important;
+      white-space:nowrap;
+    }
+    .nav-cta:hover { background:var(--navy2) !important; color:var(--white) !important; border-bottom:none !important; }
+
+    .nav-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; margin-left:1rem; }
+    .nav-toggle span { width:22px; height:2px; background:var(--navy); display:block; transition:var(--t); }
+    .nav-toggle.open span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2){ opacity:0; }
+    .nav-toggle.open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+    @media(max-width:880px){
+      .nav-toggle{ display:flex; }
+      .nav-links{
+        position:fixed; top:108px; left:0; right:0; bottom:0;
+        background:var(--white); flex-direction:column; align-items:stretch;
+        pointer-events:none; opacity:0; transition:opacity var(--t);
+        border-top:1px solid var(--rule); overflow-y:auto;
+      }
+      .nav-links.open{ pointer-events:all; opacity:1; }
+      .nav-links a { height:52px; padding:0 5vw; border-bottom:1px solid var(--rule) !important; border-left:3px solid transparent; }
+      .nav-links a:hover { border-left-color:var(--navy) !important; border-bottom-color:var(--rule) !important; }
+      .nav-cta { margin:1.2rem 5vw; width:auto; justify-content:center; }
+    }
+
+    /* ══ HERO ═══════════════════════════════════════════════ */
+    #home {
+      background: var(--navy);
+      min-height: 560px;
+      display:grid; grid-template-columns:1fr 420px;
+      position:relative; overflow:hidden;
+    }
+    /* subtle diagonal geometric overlay — CC style */
+    #home::after {
+      content:''; position:absolute; inset:0; pointer-events:none;
+      background: linear-gradient(135deg, transparent 55%, rgba(0,80,179,.18) 55%);
+    }
+    .hero-content {
+      display:flex; flex-direction:column; justify-content:center;
+      padding: 6rem 5vw 6rem 6vw; position:relative; z-index:1;
+    }
+    .hero-label {
+      font-size:.62rem; letter-spacing:.28em; text-transform:uppercase;
+      color:rgba(255,255,255,.5); font-weight:600; margin-bottom:1.6rem;
+    }
+    .hero-title {
+      font-size: clamp(2.4rem, 4.5vw, 5rem);
+      font-weight:700; line-height:1.08; letter-spacing:-.02em;
+      color:var(--white); margin-bottom:1.6rem;
+    }
+    .hero-title span { color:rgba(255,255,255,.55); font-weight:300; }
+    .hero-desc {
+      font-size:1rem; color:rgba(255,255,255,.6);
+      max-width:460px; line-height:1.8; margin-bottom:2.5rem; font-weight:300;
+    }
+    .hero-btns { display:flex; gap:.8rem; flex-wrap:wrap; }
+    .btn-hero {
+      display:inline-flex; align-items:center; gap:.55rem;
+      background:var(--white); color:var(--navy);
+      padding:.75rem 1.8rem;
+      font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      transition: background var(--t), color var(--t);
+    }
+    .btn-hero:hover { background:rgba(255,255,255,.88); }
+    .btn-hero-ghost {
+      display:inline-flex; align-items:center; gap:.55rem;
+      border:1.5px solid rgba(255,255,255,.3); color:rgba(255,255,255,.85);
+      padding:.75rem 1.8rem;
+      font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      transition: border-color var(--t), color var(--t), background var(--t);
+    }
+    .btn-hero-ghost svg { width:14px; height:14px; flex-shrink:0; }
+    .btn-hero-ghost:hover { border-color:var(--wa); color:var(--wa); }
+
+    .hero-panel {
+      background: var(--blue);
+      display:flex; flex-direction:column; justify-content:flex-end;
+      padding:3rem 3rem 3.5rem; position:relative; z-index:1;
+    }
+    .hero-panel-label {
+      font-size:.58rem; letter-spacing:.24em; text-transform:uppercase;
+      color:rgba(255,255,255,.5); font-weight:600; margin-bottom:2rem;
+    }
+    .hero-fact {
+      padding:1.2rem 0; border-top:1px solid rgba(255,255,255,.12);
+    }
+    .hero-fact:last-child { border-bottom:1px solid rgba(255,255,255,.12); }
+    .hf-num { font-size:2.6rem; font-weight:700; color:var(--white); line-height:1; margin-bottom:.25rem; letter-spacing:-.02em; }
+    .hf-text { font-size:.78rem; color:rgba(255,255,255,.55); line-height:1.5; }
+
+    @media(max-width:860px){
+      #home{ grid-template-columns:1fr; }
+      .hero-content{ padding:4rem 6vw 3rem; }
+      .hero-panel{ padding:2.5rem 6vw; }
+    }
+
+    /* ══ EXPERTISE STRIP ════════════════════════════════════ */
+    .expertise-strip {
+      background: var(--off);
+      border-bottom:1px solid var(--rule);
+      padding:0 6vw;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+    }
+    .expertise-strip-inner {
+      display:flex; max-width:1200px; margin:0 auto;
+    }
+    .es-item {
+      flex:0 0 auto; padding:1.2rem 2rem 1.2rem 0;
+      font-size:.72rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+      color:var(--mid);
+      border-bottom:3px solid transparent;
+      cursor:default; white-space:nowrap;
+      transition:color var(--t), border-color var(--t);
+    }
+    .es-item:hover, .es-item.active { color:var(--navy); border-bottom-color:var(--navy); }
+
+    /* ══ SHARED SECTION ══════════════════════════════════════ */
+    .section { padding:5.5rem 6vw; }
+    .section-alt { background:var(--off); }
+    .section-navy { background:var(--navy); }
+    .section-inner { max-width:1200px; margin:0 auto; }
+    .section-hd { margin-bottom:3rem; }
+    .eyebrow {
+      font-size:.6rem; letter-spacing:.28em; text-transform:uppercase;
+      color:var(--blue); font-weight:700; display:block; margin-bottom:.6rem;
+    }
+    .eyebrow.light { color:rgba(255,255,255,.5); }
+    .section-h {
+      font-size:clamp(1.7rem,2.8vw,2.8rem);
+      font-weight:700; line-height:1.15; color:var(--ink);
+      letter-spacing:-.02em;
+    }
+    .section-h.light { color:var(--white); }
+    .section-rule { width:36px; height:3px; background:var(--navy); margin:1rem 0 1.4rem; }
+    .section-rule.blue { background:var(--blue); }
+    .section-rule.white { background:rgba(255,255,255,.4); }
+    .section-lead { color:var(--mid); font-size:.95rem; max-width:600px; line-height:1.85; }
+    .section-lead.light { color:rgba(255,255,255,.55); }
+
+    /* ══ ABOUT ═══════════════════════════════════════════════ */
+    .about-grid { display:grid; grid-template-columns:3fr 2fr; gap:5rem; align-items:start; }
+    .about-body p { color:var(--mid); font-size:.95rem; line-height:1.9; margin-bottom:1.2rem; }
+    .about-body p:last-child{ margin-bottom:0; }
+    .about-body strong { color:var(--ink); font-weight:600; }
+    .about-body a { color:var(--blue); text-decoration:underline; text-underline-offset:3px; }
+
+    .stats-col { display:flex; flex-direction:column; gap:0; }
+    .stat {
+      padding:1.6rem 0; border-top:1px solid var(--rule);
+    }
+    .stat:last-child{ border-bottom:1px solid var(--rule); }
+    .stat-n {
+      font-size:2.8rem; font-weight:700; color:var(--navy);
+      line-height:1; margin-bottom:.25rem; letter-spacing:-.02em;
+    }
+    .stat-l { font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); font-weight:600; }
+    @media(max-width:820px){ .about-grid{ grid-template-columns:1fr; gap:3rem; } }
+
+    /* ══ PRACTICE — CC list style ════════════════════════════ */
+    .practice-grid {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:0;
+      border:1px solid var(--rule);
+    }
+    .practice-item {
+      display:flex; align-items:flex-start; gap:1.4rem;
+      padding:2rem 2.2rem;
+      border-bottom:1px solid var(--rule);
+      border-right:1px solid var(--rule);
+      transition:background var(--t);
+    }
+    .practice-item:nth-child(even){ border-right:none; }
+    .practice-item:nth-last-child(-n+2){ border-bottom:none; }
+    .practice-item:hover{ background:var(--off); }
+    .practice-item:hover .pi-num{ color:var(--blue); }
+    .practice-item:hover .pi-more{ opacity:1; transform:translateX(0); }
+    .pi-num { font-size:.62rem; font-weight:700; color:var(--rule2); letter-spacing:.1em; min-width:2rem; margin-top:.2rem; transition:color var(--t); }
+    .pi-body {}
+    .pi-title { font-size:1.02rem; font-weight:700; color:var(--navy); margin-bottom:.4rem; }
+    .pi-desc { font-size:.84rem; color:var(--mid); line-height:1.65; }
+    .pi-more {
+      display:inline-flex; align-items:center; gap:.35rem; margin-top:.8rem;
+      font-size:.65rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--blue);
+      opacity:0; transform:translateX(-6px);
+      transition:opacity var(--t), transform var(--t) var(--ease);
+    }
+    @media(max-width:680px){
+      .practice-grid{ grid-template-columns:1fr; }
+      .practice-item{ border-right:none; }
+      .practice-item:nth-last-child(-n+2){ border-bottom:1px solid var(--rule); }
+      .practice-item:last-child{ border-bottom:none; }
+    }
+
+    /* ══ MANDATES — CC table/list style ═════════════════════ */
+    .mandates-wrap {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      border:1px solid var(--rule); gap:0; margin-bottom:1px;
+    }
+    .m-col { border-right:1px solid var(--rule); }
+    .m-col:last-child{ border-right:none; }
+    .m-col-head {
+      padding:1rem 1.6rem; border-bottom:1px solid var(--rule);
+      background:var(--navy); color:var(--white);
+      font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700;
+    }
+    .m-col-sub {
+      padding:.6rem 1.6rem; border-bottom:1px solid var(--rule);
+      background:var(--off); color:var(--blue);
+      font-size:.56rem; letter-spacing:.18em; text-transform:uppercase; font-weight:700;
+    }
+    .m-item {
+      padding:1.25rem 1.6rem; border-bottom:1px solid var(--rule);
+      font-size:.83rem; color:var(--mid); line-height:1.78;
+      transition:background var(--t), color var(--t);
+      border-left:3px solid transparent;
+    }
+    .m-item:last-child{ border-bottom:none; }
+    .m-item:hover{ background:var(--off); color:var(--ink); border-left-color:var(--navy); }
+    @media(max-width:900px){ .mandates-wrap{ grid-template-columns:1fr 1fr; } }
+    @media(max-width:580px){ .mandates-wrap{ grid-template-columns:1fr; } .m-col{ border-right:none; border-bottom:1px solid var(--rule); } .m-col:last-child{ border-bottom:none; } }
+
+    /* ══ EDUCATION — CC card style ═══════════════════════════ */
+    .edu-grid {
+      display:grid; grid-template-columns:repeat(3,1fr);
+      gap:1.5rem;
+    }
+    .edu-card {
+      background:var(--white); padding:2.2rem;
+      border:1px solid var(--rule);
+      border-top:4px solid var(--navy);
+      transition:box-shadow var(--t), transform var(--t);
+    }
+    .edu-card:hover {
+      box-shadow:0 8px 32px rgba(0,30,98,.1);
+      transform:translateY(-3px);
+    }
+    .edu-year { font-size:.6rem; letter-spacing:.2em; text-transform:uppercase; color:var(--blue); margin-bottom:.9rem; font-weight:700; }
+    .edu-deg { font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:.4rem; line-height:1.3; }
+    .edu-inst { font-size:.84rem; color:var(--mid); line-height:1.55; }
+    .edu-tag {
+      display:inline-block; margin-top:1.2rem;
+      padding:.2rem .75rem; background:var(--off);
+      font-size:.57rem; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--navy); font-weight:700; border:1px solid var(--rule);
+    }
+    @media(max-width:760px){ .edu-grid{ grid-template-columns:1fr; } }
+
+    /* ══ CONTACT ═════════════════════════════════════════════ */
+    .contact-grid { display:grid; grid-template-columns:1fr 1.8fr; gap:6rem; }
+    .contact-info { display:flex; flex-direction:column; gap:1.8rem; }
+    .ci-label { font-size:.58rem; letter-spacing:.22em; text-transform:uppercase; color:var(--blue); margin-bottom:.3rem; font-weight:700; }
+    .ci-value { font-size:.92rem; color:var(--ink); line-height:1.6; }
+    .ci-value a { color:var(--blue); text-decoration:underline; text-underline-offset:3px; transition:color var(--t); }
+    .ci-value a:hover{ color:var(--navy); }
+
+    .wa-block {
+      background:var(--off); border:1px solid var(--rule); border-left:4px solid var(--wa);
+      padding:1.4rem 1.6rem;
+      display:flex; align-items:center; gap:1rem;
+      margin-top:.5rem;
+    }
+    .wa-block svg{ width:22px; height:22px; flex-shrink:0; color:var(--wa); }
+    .wa-block-text strong { display:block; font-size:.82rem; color:var(--ink); margin-bottom:.12rem; font-weight:600; }
+    .wa-block-text span { font-size:.78rem; color:var(--mid); }
+    .wa-block-btn {
+      margin-left:auto; flex-shrink:0;
+      background:var(--wa); color:var(--white);
+      padding:.48rem 1.1rem;
+      font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700;
+      font-family:var(--sans); border:none; cursor:pointer;
+      transition:background var(--t);
+      white-space:nowrap;
+    }
+    .wa-block-btn:hover{ background:#1DAF56; }
+
+    .contact-form { display:flex; flex-direction:column; gap:1.1rem; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1.1rem; }
+    .form-group { display:flex; flex-direction:column; gap:.35rem; }
+    .form-label { font-size:.58rem; letter-spacing:.18em; text-transform:uppercase; color:var(--mid); font-weight:700; }
+    .form-input, .form-textarea {
+      border:1px solid var(--rule); border-bottom:2px solid var(--rule2);
+      background:var(--white); color:var(--ink);
+      font-family:var(--sans); font-size:.9rem; font-weight:400;
+      padding:.78rem 1rem; outline:none;
+      transition:border-color var(--t);
+    }
+    .form-input:focus, .form-textarea:focus{ border-color:var(--navy); }
+    .form-input::placeholder, .form-textarea::placeholder{ color:#bbb; }
+    .form-textarea{ resize:vertical; min-height:130px; }
+    .form-btn {
+      align-self:flex-start; cursor:pointer;
+      background:var(--navy); color:var(--white); border:none;
+      font-family:var(--sans); font-size:.66rem; font-weight:700;
+      letter-spacing:.14em; text-transform:uppercase;
+      padding:.88rem 2.4rem;
+      transition:background var(--t);
+    }
+    .form-btn:hover{ background:var(--navy2); }
+    .form-ok{
+      display:none; padding:.9rem 1.1rem;
+      background:rgba(37,211,102,.07); border-left:3px solid var(--wa);
+      font-size:.85rem; color:#166534;
+    }
+    @media(max-width:820px){ .contact-grid{ grid-template-columns:1fr; gap:3rem; } .form-row{ grid-template-columns:1fr; } }
+
+    /* ══ FOOTER ══════════════════════════════════════════════ */
+    footer {
+      background: var(--navy);
+    }
+    .footer-top {
+      padding:3.5rem 6vw; display:flex; gap:4rem; flex-wrap:wrap;
+      max-width:1200px; margin:0 auto;
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .footer-brand-col { flex:0 0 240px; }
+    .footer-brand-name { font-size:1rem; font-weight:700; color:var(--white); margin-bottom:.3rem; }
+    .footer-brand-sub { font-size:.6rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.4); }
+    .footer-brand-desc { font-size:.8rem; color:rgba(255,255,255,.4); line-height:1.7; margin-top:1.2rem; }
+    .footer-links-col { flex:1; min-width:140px; }
+    .footer-col-hd { font-size:.6rem; letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.45); font-weight:700; margin-bottom:1rem; }
+    .footer-links-col a {
+      display:block; font-size:.82rem; color:rgba(255,255,255,.55); padding:.3rem 0;
+      transition:color var(--t);
+    }
+    .footer-links-col a:hover { color:var(--white); }
+    .footer-bottom {
+      padding:1.2rem 6vw; display:flex; align-items:center; justify-content:space-between;
+      flex-wrap:wrap; gap:.8rem;
+      font-size:.65rem; color:rgba(255,255,255,.3); letter-spacing:.06em;
+      max-width:1200px; margin:0 auto;
+    }
+    @media(max-width:600px){ .footer-top{ flex-direction:column; gap:2.5rem; } .footer-brand-col{ flex:unset; } }
+
+    /* ══ WHATSAPP FLOAT ══════════════════════════════════════ */
+    .wa-float {
+      position:fixed; bottom:2rem; right:2rem; z-index:800;
+      width:50px; height:50px; border-radius:50%;
+      background:#25D366; color:var(--white);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 18px rgba(37,211,102,.4);
+      transition:transform var(--t) var(--ease), box-shadow var(--t);
+    }
+    .wa-float:hover{ transform:scale(1.1); box-shadow:0 6px 26px rgba(37,211,102,.55); }
+    .wa-float svg{ width:25px; height:25px; }
+
+    /* ══ INSIGHTS ════════════════════════════════════════════ */
+    .insights-layout {
+      display:grid; grid-template-columns:1fr 1fr; gap:1.5rem;
+      margin-bottom:1.5rem;
+    }
+    .insight-featured {
+      grid-row: span 2;
+      background:var(--navy); color:var(--white);
+      padding:2.8rem 2.6rem;
+      display:flex; flex-direction:column; justify-content:flex-end;
+      position:relative; overflow:hidden;
+      border-top:4px solid var(--blue);
+      transition:box-shadow var(--t);
+    }
+    .insight-featured:hover { box-shadow:0 12px 40px rgba(0,30,98,.22); }
+    .insight-featured::before {
+      content:''; position:absolute; top:0; right:0;
+      width:220px; height:220px;
+      border:1px solid rgba(255,255,255,.06); border-radius:50%;
+      transform:translate(60px,-60px);
+    }
+    .if-tag {
+      display:inline-block; background:var(--blue);
+      padding:.22rem .75rem; font-size:.56rem; letter-spacing:.2em;
+      text-transform:uppercase; font-weight:700; color:var(--white);
+      margin-bottom:1.6rem; width:fit-content;
+    }
+    .if-date { font-size:.62rem; color:rgba(255,255,255,.4); letter-spacing:.12em; text-transform:uppercase; margin-bottom:.8rem; font-weight:500; }
+    .if-title { font-size:1.22rem; font-weight:700; color:var(--white); line-height:1.35; margin-bottom:.9rem; letter-spacing:-.01em; }
+    .if-citation { font-size:.7rem; color:rgba(255,255,255,.45); letter-spacing:.06em; margin-bottom:1rem; font-style:italic; }
+    .if-body { font-size:.86rem; color:rgba(255,255,255,.65); line-height:1.85; margin-bottom:1.4rem; }
+    .if-provisions {
+      display:flex; flex-wrap:wrap; gap:.45rem; margin-bottom:1.5rem;
+    }
+    .if-prov {
+      font-size:.6rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      padding:.2rem .65rem; border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.6);
+    }
+    .if-read {
+      display:inline-flex; align-items:center; gap:.4rem;
+      font-size:.65rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase;
+      color:rgba(255,255,255,.55); transition:color var(--t);
+    }
+    .if-read::after { content:'→'; }
+    .insight-featured:hover .if-read { color:var(--white); }
+
+    .insight-card {
+      background:var(--white); border:1px solid var(--rule);
+      border-top:3px solid var(--navy);
+      padding:1.8rem 2rem;
+      display:flex; flex-direction:column;
+      transition:box-shadow var(--t), transform var(--t);
+    }
+    .insight-card:hover { box-shadow:0 6px 24px rgba(0,30,98,.1); transform:translateY(-2px); }
+    .ic-tag {
+      display:inline-block; background:var(--off);
+      padding:.18rem .65rem; font-size:.54rem; letter-spacing:.18em;
+      text-transform:uppercase; font-weight:700; color:var(--blue);
+      margin-bottom:1rem; width:fit-content; border:1px solid var(--rule);
+    }
+    .ic-date { font-size:.6rem; color:var(--light); letter-spacing:.1em; text-transform:uppercase; margin-bottom:.55rem; }
+    .ic-title { font-size:.98rem; font-weight:700; color:var(--navy); line-height:1.35; margin-bottom:.4rem; letter-spacing:-.01em; }
+    .ic-citation { font-size:.68rem; color:var(--light); font-style:italic; margin-bottom:.8rem; }
+    .ic-body { font-size:.83rem; color:var(--mid); line-height:1.82; flex:1; margin-bottom:1rem; }
+    .ic-provisions { display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1rem; }
+    .ic-prov {
+      font-size:.57rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+      padding:.18rem .55rem; border:1px solid var(--rule); color:var(--navy); background:var(--off);
+    }
+    .ic-read {
+      display:inline-flex; align-items:center; gap:.4rem; margin-top:auto;
+      font-size:.63rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase;
+      color:var(--blue); transition:gap var(--t);
+    }
+    .ic-read::after { content:'→'; }
+    .insight-card:hover .ic-read { gap:.6rem; }
+
+    .insights-grid-lower {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;
+    }
+
+    .insights-note {
+      margin-top:2.5rem; padding:1.2rem 1.6rem;
+      background:var(--off); border-left:3px solid var(--blue);
+      font-size:.8rem; color:var(--mid); line-height:1.75;
+    }
+    .insights-note strong { color:var(--navy); }
+
+    @media(max-width:900px){
+      .insights-layout{ grid-template-columns:1fr; }
+      .insight-featured{ grid-row:auto; }
+      .insights-grid-lower{ grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:580px){
+      .insights-grid-lower{ grid-template-columns:1fr; }
+    }
+
+    /* ══ FIND OUT MORE LINK ══════════════════════════════════ */
+    .fom {
+      display:inline-flex; align-items:center; gap:.45rem;
+      font-size:.72rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+      color:var(--blue); transition:gap var(--t);
+    }
+    .fom:hover{ gap:.7rem; }
+    .fom::after { content:'→'; }
+  </style>
+</head>
+<body>
+
+<!-- ══ WHATSAPP FLOAT ═════════════════════════════════════ -->
+<a class="wa-float" href="https://wa.me/919654400709?text=Hello%2C%20I%20would%20like%20to%20consult%20with%20you%20regarding%20a%20legal%20matter." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ══ TOP BAR ════════════════════════════════════════════ -->
+<div class="top-bar">
+  <span class="top-bar-left">Advocate &amp; Solicitor · New Delhi, India</span>
+  <div class="top-bar-links">
+    <a href="mailto:abhayjeetrao@gmail.com">abhayjeetrao@gmail.com</a>
+    <span style="color:rgba(255,255,255,.2);">|</span>
+    <a href="tel:+919654400709">+91 96544 00709</a>
+  </div>
+</div>
+
+<!-- ══ NAV ═══════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="#home" class="nav-brand">
+    <div class="nav-brand-wrap">
+      <span class="nav-brand-name">Abhayjeet Singh Rao</span>
+      <span class="nav-brand-sub">Advocate &amp; Solicitor</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about"     onclick="closeMenu()">About</a></li>
+    <li><a href="#practice"  onclick="closeMenu()">Practice</a></li>
+    <li><a href="#mandates"  onclick="closeMenu()">Mandates</a></li>
+    <li><a href="#education" onclick="closeMenu()">Education</a></li>
+    <li><a href="#insights"  onclick="closeMenu()">Insights</a></li>
+    <li><a href="#contact"   onclick="closeMenu()" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══ HERO ══════════════════════════════════════════════ -->
+<section id="home">
+  <div class="hero-content">
+    <div class="hero-label">Advocate &amp; Solicitor · LLM International Commercial Laws</div>
+    <h1 class="hero-title">
+      Abhayjeet<br/><span>Singh Rao</span>
+    </h1>
+    <p class="hero-desc">
+      Counsel with over ten years of litigation experience across Indian courts and
+      international commercial practice — spanning aviation finance, cross-border
+      transactions, and dispute resolution before the courts of England and Wales.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-hero">Request a Consultation</a>
+      <a href="https://wa.me/919654400709?text=Hello%2C%20I%20would%20like%20to%20consult%20with%20you%20regarding%20a%20legal%20matter." target="_blank" rel="noopener" class="btn-hero-ghost">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <div class="hero-panel-label">At a Glance</div>
+    <div class="hero-fact">
+      <div class="hf-num">10+</div>
+      <div class="hf-text">Years of active litigation practice across Delhi High Court and district courts</div>
+    </div>
+    <div class="hero-fact">
+      <div class="hf-num">150+</div>
+      <div class="hf-text">Clients represented across criminal, civil, and commercial matters</div>
+    </div>
+    <div class="hero-fact">
+      <div class="hf-num">4+</div>
+      <div class="hf-text">Countries of operation — India, Ireland, Dubai, England &amp; Wales</div>
+    </div>
+    <div class="hero-fact">
+      <div class="hf-num">LLM</div>
+      <div class="hf-text">International Commercial Laws · University of Limerick · 2:1 · 2025</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXPERTISE STRIP ════════════════════════════════════ -->
+<div class="expertise-strip">
+  <div class="expertise-strip-inner">
+    <div class="es-item active">Criminal Defence</div>
+    <div class="es-item">Corporate &amp; Commercial</div>
+    <div class="es-item">Aviation Finance</div>
+    <div class="es-item">Arbitration</div>
+    <div class="es-item">Family &amp; Matrimonial</div>
+    <div class="es-item">Real Estate</div>
+    <div class="es-item">International Law</div>
+  </div>
+</div>
+
+<!-- ══ ABOUT ══════════════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <div class="section-hd">
+      <span class="eyebrow reveal">Profile</span>
+      <h2 class="section-h reveal">A Practice Built on Depth<br/>and Dedication</h2>
+      <div class="section-rule reveal"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-body">
+        <p class="reveal">
+          <strong>Abhayjeet Singh Rao</strong> is a practising advocate with over ten years of
+          litigation experience across the courts of New Delhi, Gurugram, and Faridabad. His practice
+          has encompassed the Delhi High Court and district courts, with a client base ranging from
+          individuals and families to corporations and multinational entities.
+        </p>
+        <p class="reveal d1">
+          In 2023, he pursued an <strong>LLM in International Commercial Laws</strong> at the
+          University of Limerick, graduating with a 2:1 in January 2025. His profile was published
+          on the university's webpage on the personal recommendation of the Dean of the Law School —
+          a distinction that reflects both his academic record and his professional standing.
+        </p>
+        <p class="reveal d2">
+          During his time in Ireland, he gained direct transactional experience at an aircraft
+          leasing enterprise — working on operating lease agreements, trust arrangements, and
+          financing across EU, Asia-Pacific, Middle East, Africa, and American jurisdictions under
+          the Cape Town Convention. He also assisted a leading law firm in commercial litigation
+          before the Commercial Division of the High Court of England and Wales, and advised on
+          cross-border trade compliance under the TFEU and Double Tax Treaty frameworks.
+        </p>
+        <p class="reveal d3">
+          <a href="#contact" class="fom">Request a Consultation</a>
+        </p>
+      </div>
+      <div class="stats-col reveal d1">
+        <div class="stat">
+          <div class="stat-n">10+</div>
+          <div class="stat-l">Years of Active Practice</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">150+</div>
+          <div class="stat-l">Clients Represented</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">7</div>
+          <div class="stat-l">Practice Areas</div>
+        </div>
+        <div class="stat">
+          <div class="stat-n">4+</div>
+          <div class="stat-l">Countries of Operation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRACTICE AREAS ══════════════════════════════════════ -->
+<section id="practice" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-hd">
+      <span class="eyebrow reveal">Expertise</span>
+      <h2 class="section-h reveal">Practice Areas</h2>
+      <div class="section-rule reveal"></div>
+      <p class="section-lead reveal">A full-service litigation and advisory practice across seven core disciplines, backed by courtroom experience and international commercial training.</p>
+    </div>
+    <div class="practice-grid">
+      <div class="practice-item reveal d1">
+        <div class="pi-num">01</div>
+        <div class="pi-body">
+          <div class="pi-title">Criminal Defence</div>
+          <div class="pi-desc">FIR matters, anticipatory and regular bail, sessions trials, NDPS cases, discharge applications, and High Court appeals.</div>
+          <div class="pi-more">Find out more</div>
+        </div>
+      </div>
+      <div class="practice-item reveal d2">
+        <div class="pi-num">02</div>
+        <div class="pi-body">
+          <div class="pi-title">Corporate &amp; Commercial Law</div>
+          <div class="pi-desc">NCLT proceedings, franchise and distribution agreements, corporate advisory, commercial contract drafting, and dispute resolution.</div>
+          <div class="pi-more">Find out more</div>
+        </div>
+      </div>
+      <div class="practice-item reveal d3">
+        <div class="pi-num">03</div>
+        <div class="pi-body">
+          <div class="pi-title">Aviation Finance &amp; Transactions</div>
+          <div class="pi-desc">Aircraft operating leases, trust arrangements, financing and refinancing, due diligence on ownership and registration under the Cape Town Convention across EU, APAC, MEA, and American jurisdictions.</div>
+          <div class="pi-more">Find out more</div>
+        </div>
+      </div>
+      <div class="practice-item reveal d4">
+        <div class="pi-num">04</div>
+        <div class="pi-body">
+          <div class="pi-title">Family &amp; Matrimonial Law</div>
+          <div class="pi-desc">Divorce petitions, contested matrimonial disputes, maintenance, child custody, guardianship, and domestic violence proceedings.</div>
+          <div class="pi-more">Find out more</div>
+        </div>
+      </div>
+      <div class="practice-item reveal d5">
+        <div class="pi-num">05</div>
+        <div class="pi-body">
+          <div class="pi-title">Property &amp; Real Estate Law</div>
+          <div class="pi-desc">Builder-buyer disputes, RERA proceedings, title matters, possession and injunction applications, and cooperative housing disputes.</div>
+          <div class="pi-more">Find out more</div>
+        </div>
+      </div>
+      <div class="practice-item reveal d6">
+        <div class="pi-num">06</div>
+        <div class="pi-body">
+          <div class="pi-title">Consumer &amp; Regulatory Law</div>
+          <div class="pi-desc">Consumer Commission proceedings, environmental regulatory defence, deficiency of service complaints, and pre-litigation advisory.</div>
+          <div class="pi-more">Find out more</div>
+        </div>
+      </div>
+      <div class="practice-item reveal" style="grid-column:1/-1; border-bottom:none;">
+        <div class="pi-num">07</div>
+        <div class="pi-body">
+          <div class="pi-title">International Commercial Law</div>
+          <div class="pi-desc">Cross-border transactions, TFEU and Double Tax Treaty advisory, EWHC litigation support, and international contract review for clients across Ireland, Dubai, Canada, and the United States.</div>
+          <div class="pi-more">Find out more</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MANDATES ═══════════════════════════════════════════ -->
+<section id="mandates" class="section">
+  <div class="section-inner">
+    <div class="section-hd">
+      <span class="eyebrow reveal">Selected Work</span>
+      <h2 class="section-h reveal">History of Mandates</h2>
+      <div class="section-rule reveal"></div>
+      <p class="section-lead reveal">A selection of matters conducted over ten years of active practice. All mandates are presented without identifying particulars.</p>
+    </div>
+
+    <div class="mandates-wrap reveal">
+      <div class="m-col">
+        <div class="m-col-head">Criminal Defence</div>
+        <div class="m-item">Appeared as lead counsel in a sessions trial involving a capital charge of murder, with the accused additionally charged for criminal conspiracy, abetment with common intention, and offences under the Arms Act. Managed case strategy, filed the bail application before the Additional Sessions Judge, and attended all substantive hearing dates.</div>
+        <div class="m-item">Represented one of fourteen co-accused in a complex sessions trial for murder, abduction, rioting with deadly weapons, and offences under the Arms Act. Developed an individualised defence strategy to distinguish the client's role and prepared detailed written submissions on the adequacy of the prosecution's evidence.</div>
+        <div class="m-item">Appeared for the accused in a multi-section criminal trial involving rioting, grievous hurt, criminal trespass, and criminal intimidation. Prepared the defence brief, cross-examined prosecution witnesses, and tendered evidence at the defence stage.</div>
+        <div class="m-item">Argued a bail application before the Additional Sessions Court on behalf of an accused facing prosecution for attempt to murder, unlawful assembly, causing hurt, and criminal conspiracy — detailing grounds on antecedents, flight risk, and the absence of any overt act attributable to the applicant.</div>
+        <div class="m-item">Represented the accused in a matter involving allegations of sexual assault, conducting a forensic review of material improvements and contradictions across successive prosecution witness statements for cross-examination.</div>
+        <div class="m-item">Filed a discharge application under Section 227 Cr.PC before the Sessions Court, urging that the prosecution material, taken at its highest, disclosed no grave suspicion sufficient to justify the framing of charges.</div>
+        <div class="m-item">Filed a bail application in a financial fraud prosecution involving allegations of cheating, criminal breach of trust, and conspiracy. Prepared a detailed transaction-mapping brief setting out the flow of funds and the absence of dishonest intention.</div>
+        <div class="m-item">Appeared for the accused in a prosecution under the Narcotic Drugs and Psychotropic Substances Act, 1985, opposing custody and advancing bail grounds by reference to Section 37 of the Act and the character of the alleged substance.</div>
+        <div class="m-item">Filed a criminal appeal under Section 374 Cr.PC challenging a conviction, advancing arguments on material errors in appreciation of evidence and procedural irregularities in the conduct of the trial.</div>
+        <div class="m-item">Appeared for a juvenile accused before the Juvenile Justice Board, applying for bail under Section 12 of the Juvenile Justice Act and advising on the applicable framework for age determination.</div>
+        <div class="m-item">Filed an application under Section 10(3) of the Passports Act, 1967 before the Regional Passport Officer seeking impounding of passports of multiple accused persons to prevent flight risk during the pendency of investigation.</div>
+        <div class="m-item">Prepared a research brief on whether a Magistrate retains power to remand an accused to police custody after submission of a supplementary charge sheet, examining the interplay of Sections 167(2), 209, and 309 Cr.PC through a detailed analysis of reported decisions.</div>
+        <div class="m-item">Drafted a complaint to the Commissioner of Police seeking registration of an FIR for cheating, document fraud, and misappropriation of funds arising from a commercial financing transaction causing substantial loss to the complainant enterprise.</div>
+        <div class="m-item">Represented the accused across bail and initial proceedings in a matter involving criminal breach of trust, cheating, and criminal conspiracy in a commercial context, advising on the principal defences available at trial.</div>
+      </div>
+
+      <div class="m-col">
+        <div class="m-col-head">Commercial &amp; NI Act</div>
+        <div class="m-item">Conducted the full trial as Litigation Counsel in a Section 138 Negotiable Instruments Act complaint — from service of process, examination, cross-examination, and defence evidence through to final arguments — and subsequently filed a criminal appeal before the Additional Sessions Judge challenging the trial court's findings on appreciation of evidence.</div>
+        <div class="m-item">Appeared for a corporate complainant in the automotive retail sector in a Section 138 NI Act matter. In a concurrent transactional retainer for the same client, drafted a detailed financing agreement governing a multi-crore working capital arrangement with repayment schedule, default provisions, and security mechanisms.</div>
+        <div class="m-item">Appeared for a complainant in a Section 138 NI Act matter requiring cross-jurisdictional service of summons upon an accused domiciled outside the court's ordinary territorial limits, obtaining an order directing service through the Magistrate in the relevant jurisdiction.</div>
+        <div class="m-item">Appeared for the plaintiff, the Indian subsidiary of a US-headquartered management and actuarial consulting corporation, in a commercial recovery suit under the Commercial Courts Act, 2015. Opposed an Order VII Rule 11 CPC application, successfully contending that the matter was properly before the Commercial Court.</div>
+        <div class="m-item">Filed a recovery reference under Section 18 of the MSME Development Act, 2006 before the designated Facilitation Council on behalf of a polymer manufacturing enterprise, seeking recovery of outstanding trade dues from a corporate buyer in default.</div>
+        <div class="m-item">Filed a reference before the MSME Facilitation Council on behalf of a garment manufacturing enterprise, seeking recovery of contractual receivables from a corporate buyer, and filed the requisite undertaking and Form III declaration.</div>
+        <div class="m-item">Prosecuted execution proceedings under Order XXI CPC on behalf of a corporate decree-holder, filing applications for revival, proclamation, and attachment of property against a judgment debtor in wilful default of satisfaction of a money decree.</div>
+        <div class="m-item">Filed a reply opposing an Order VII Rule 11 CPC application seeking rejection of a commercial plaint, successfully contending that the matter was a commercial dispute within the jurisdiction of the Commercial Court with a cognisable cause of action.</div>
+        <div class="m-item">Appeared for a corporate respondent in a revision petition under Section 397 Cr.PC arising from an NI Act conviction, advancing arguments on the narrow scope of revisional jurisdiction and the impermissibility of re-appreciation of evidence absent manifest illegality.</div>
+        <div class="m-item">Drafted and served a pre-litigation demand notice on behalf of a resin and chemicals manufacturer against a healthcare company in default, setting out the quantum of the outstanding amount, contractual basis, and remedies to be pursued upon non-compliance.</div>
+        <div class="m-item">Filed a civil suit for permanent and mandatory injunction on behalf of a corporate client, obtained an interim order of stay, and subsequently opposed the defendant's application for vacation, presenting the factual and legal case for continuance of the injunction.</div>
+        <div class="m-item">Represented a corporate defendant in a suit for declaration and mandatory injunction, filing a detailed written statement raising preliminary objections on limitation, territorial jurisdiction, and the absence of locus standi.</div>
+        <div class="m-item">Advised a corporate client on available remedies in a delayed-payment dispute, co-ordinating pre-litigation demand correspondence and advising on the procedure for referral to the MSME Facilitation Council.</div>
+      </div>
+
+      <div class="m-col">
+        <div class="m-col-head">Arbitration &amp; Real Estate</div>
+        <div class="m-item">Drafted and filed a Section 9 petition under the Arbitration and Conciliation Act, 1996 before the Additional District Judge on behalf of an ed-tech company, seeking urgent pre-arbitral interim relief against a university respondent following its unilateral breach of a commercial services agreement.</div>
+        <div class="m-item">Filed a Section 11 petition under the Arbitration and Conciliation Act, 1996 before the High Court, seeking judicial appointment of an arbitrator following failure of the contractually agreed appointment mechanism, advancing arguments on the validity of the arbitration clause.</div>
+        <div class="m-item">Appeared as respondent's counsel in an arbitration matter before the Additional District Judge arising from a university-enterprise collaboration dispute, contesting entitlement to interim relief and preparing a statement of defence for the main arbitral proceedings.</div>
+        <div class="m-item">Filed a Section 34 petition challenging an arbitral award on grounds of conflict with public policy and procedural impropriety in the conduct of the arbitral proceedings.</div>
+        <div class="m-item">Advised a manufacturing company on the institutional architecture and cost structure of ad hoc arbitration, preparing a comprehensive stage-wise fee document and procedural roadmap for a commercial dispute referred to arbitration.</div>
+        <div class="m-col-sub">Real Estate &amp; Property</div>
+        <div class="m-item">Represented the respondent-developer in a series of parallel RERA complaints before the Haryana Real Estate Regulatory Authority, filing additional affidavits raising submissions on force majeure, regulatory approvals, and the non-applicability of RERA to pre-commencement project phases.</div>
+        <div class="m-item">Filed an application for vacation of an interim stay in a civil suit for permanent and mandatory injunction, presenting a detailed factual record to demonstrate that the balance of convenience favoured vacation.</div>
+        <div class="m-item">Represented the plaintiff in a suit for declaration before the Civil Judge (Senior Division), prosecuting interlocutory applications including a motion under Order VIII Rule 10 CPC to strike off the defendants' right to file a written statement.</div>
+        <div class="m-item">Advised a member of a cooperative housing society on rights in relation to a Development Agreement entered into between the society and its developer, and drafted a formal disclosure application on the member's behalf.</div>
+        <div class="m-item">Filed an application under Order XXXIX Rules 1 and 2 CPC seeking an injunction restraining a developer from creating any third-party interest in a disputed commercial property pending determination of the underlying suit for specific performance.</div>
+      </div>
+    </div>
+
+    <div class="mandates-wrap reveal" style="margin-top:1px;">
+      <div class="m-col">
+        <div class="m-col-head">Family &amp; Matrimonial</div>
+        <div class="m-item">Filed and argued a guardianship petition under Sections 7, 10, 12, and 25 of the Guardians and Wards Act, 1890 before the Additional Principal Judge, Family Court, seeking appointment of the petitioner as guardian of a minor child and custody. Conducted examination-in-chief of the petitioner at the evidence stage.</div>
+        <div class="m-item">Appeared for the petitioner in proceedings under the Protection of Women from Domestic Violence Act, 2005, filing applications for protection orders and residence orders before the competent Magistrate, and advising on the civil and criminal remedies concurrently available.</div>
+        <div class="m-item">Filed and argued a maintenance application under Section 125 Cr.PC, advising on the legal criteria for entitlement, the principles applied in quantifying the monthly allowance, and the scope of interim maintenance pending final adjudication.</div>
+        <div class="m-item">Appeared in divorce proceedings under the Hindu Marriage Act, 1955, advising on available grounds, preparing and filing the petition, and attending all procedural hearings through to the stage of trial.</div>
+        <div class="m-item">Filed a bail application in a matrimonial matter involving concurrent allegations under Section 498-A IPC and provisions relating to cheating and criminal breach of trust, advancing submissions on the absence of credible prima facie material.</div>
+        <div class="m-item">Prepared and filed a detailed income and assets affidavit in Family Court proceedings, disclosing all moveable and immoveable property, financial liabilities, and monthly income in compliance with the court's directions for financial disclosure.</div>
+        <div class="m-item">Provided a written legal advisory to an overseas client on the applicable law governing applications for revocation of guardian appointments under a Canadian province's family legislation, identifying the relevant statutory grounds and principles applied by the superior courts.</div>
+        <div class="m-item">Drafted a Family Settlement Deed for parties in a contested property and investment dispute, documenting the negotiated allocation of immoveable properties, business interests, and financial instruments in a form suitable for registration.</div>
+      </div>
+
+      <div class="m-col">
+        <div class="m-col-head">Consumer &amp; Regulatory</div>
+        <div class="m-item">Drafted and filed a written statement on behalf of a corporate respondent before the District Consumer Disputes Redressal Commission under Section 35 of the Consumer Protection Act, 2019 — raising preliminary objections on maintainability and limitation, and traversing the merits of the alleged deficiency of service.</div>
+        <div class="m-item">Appeared for officers and managers of an industrial enterprise in a regulatory prosecution by the State Pollution Control Board before the Special Environment Court under the Environment Protection Act, 1986, filing submissions opposing remand and advising on individual criminal liability for officers of a company in environmental offences.</div>
+        <div class="m-item">Filed a discharge application under Section 245 Cr.PC before the Special Environment Court on behalf of a director in a State Pollution Control Board prosecution, urging insufficiency of material on record to justify proceeding to trial against the individual accused.</div>
+        <div class="m-item">Advised a corporate client on the defence of consumer complaints filed before multiple forums concurrently, co-ordinating written responses and advising on strategic sequencing and grounds for statutory appeals under Section 41 of the Consumer Protection Act, 2019.</div>
+        <div class="m-item">Appeared for a corporate entity before the Consumer Commission, cross-examining the complainant's witness and filing books of authority on the standard of proof applicable to consumer complaints under the Act of 2019.</div>
+        <div class="m-item">Filed an application seeking appointment of a court commissioner for local inspection of disputed premises in a civil suit, with a view to placing an independent report of the condition and characteristics of the property on record.</div>
+        <div class="m-item">Filed books of authority before the Judicial Magistrate in a private complaint, placing on record leading precedents on the standard for issuance of process under Section 204 Cr.PC and the Magistrate's obligation to apply his mind at the pre-summoning stage.</div>
+      </div>
+
+      <div class="m-col">
+        <div class="m-col-head">International &amp; Transactional</div>
+        <div class="m-col-sub">Aviation Finance</div>
+        <div class="m-item">Conducted comprehensive reviews of aircraft operating lease agreements, trust agreements, and leaseback arrangements in connection with the transfer and financing of commercial aircraft across multiple jurisdictions, ensuring satisfaction of all conditions precedent and subsequent to closing.</div>
+        <div class="m-item">Assisted in transactions involving the leasing, sale and purchase, and financing and refinancing of commercial aircraft across EU, Asia-Pacific, Middle East, Africa, and American jurisdictions, working within the relevant regulatory frameworks applicable to each transaction.</div>
+        <div class="m-item">Conducted due diligence on ownership and registration changes with the Civil Aviation Authority, and examined beneficial ownership interests in mobile assets registered under the International Registry pursuant to the Cape Town Convention.</div>
+        <div class="m-item">Analysed commercial and regulatory dimensions of aviation leasing disputes — gaining exposure to mechanisms of repossession, remedy enforcement under lease default provisions, and the jurisdictional challenges arising from cross-border aviation finance transactions.</div>
+        <div class="m-col-sub">Cross-Border Trade</div>
+        <div class="m-item">Assisted in cross-boundary compliance work for large-scale import orders of mineral-based products, advising on applicable regulatory frameworks and co-ordinating with counterparties across multiple stages of the supply chain.</div>
+        <div class="m-item">Drafted sale and service agreements and assisted in negotiations with EU member-state counterparties on applicable principles of trade under the TFEU and the implications of Double Tax Treaty arrangements for cross-border commercial transactions.</div>
+        <div class="m-item">Assisted a leading law firm in commercial litigation before the Commercial Division of the High Court of England and Wales, gaining direct exposure to English commercial procedure and the management of cross-jurisdictional matters involving an Asian counterpart.</div>
+        <div class="m-item">Reviewed and advised upon a cross-border distribution agreement, identifying commercial risk in relation to warranty liability, territorial exclusivity, termination rights, intellectual property protection, and the selection of governing law and dispute resolution forum.</div>
+        <div class="m-item">Appeared for the Indian subsidiary of a US-based corporation in commercial recovery litigation before the Commercial Court, managing all procedural and substantive aspects of the matter and co-ordinating case strategy with the parent entity's international legal team.</div>
+        <div class="m-item">Provided cross-jurisdictional legal research and advisory services on aspects of Indian criminal procedure, preventive statutory remedies, and interim relief mechanisms, producing a written legal opinion suitable for use in related foreign legal proceedings.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ EDUCATION ═════════════════════════════════════════ -->
+<section id="education" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-hd">
+      <span class="eyebrow reveal">Qualifications</span>
+      <h2 class="section-h reveal">Education</h2>
+      <div class="section-rule reveal"></div>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card reveal d1">
+        <div class="edu-year">2023 – 2024 · Awarded 2:1 · January 2025</div>
+        <div class="edu-deg">Master of Laws — International Commercial Laws</div>
+        <div class="edu-inst">University of Limerick, Ireland · Profile published on Dean's recommendation</div>
+        <span class="edu-tag">LLM · International</span>
+      </div>
+      <div class="edu-card reveal d2">
+        <div class="edu-year">2016 – 2017</div>
+        <div class="edu-deg">Masters of Business Law</div>
+        <div class="edu-inst">National University of Juridical Sciences, West Bengal</div>
+        <span class="edu-tag">LLM · Business Law</span>
+      </div>
+      <div class="edu-card reveal d3">
+        <div class="edu-year">2011 – 2016 · Awarded 2:1</div>
+        <div class="edu-deg">Bachelor of Law</div>
+        <div class="edu-inst">Faculty of Law, Maharshi Dayanand University, Rohtak</div>
+        <span class="edu-tag">LLB · Five Year</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INSIGHTS ═══════════════════════════════════════════ -->
+<section id="insights" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-hd">
+      <span class="eyebrow reveal">Supreme Court · Criminal Law</span>
+      <h2 class="section-h reveal">Insights</h2>
+      <div class="section-rule reveal"></div>
+      <p class="section-lead reveal">A curated digest of significant Supreme Court decisions in criminal law — updated twice weekly. Each entry sets out the relevant statutory provisions, a brief of facts, and the court's reasoning.</p>
+    </div>
+
+    <!-- Top row: featured + two cards -->
+    <div class="insights-layout reveal">
+
+      <!-- FEATURED -->
+      <div class="insight-featured">
+        <div class="if-tag">Featured · Bail Law</div>
+        <div class="if-date">20 May 2025</div>
+        <h3 class="if-title">Bail is the Rule, Jail is the Exception — Supreme Court Reaffirms the Constitutional Baseline</h3>
+        <div class="if-citation">Satender Kumar Antil v. Central Bureau of Investigation &amp; Anr. — (2022) 10 SCC 51</div>
+        <div class="if-body">
+          In one of the most consequential bail pronouncements of the decade, a two-judge Bench comprising Justices S.K. Kaul and M.M. Sundresh issued comprehensive directions to subordinate courts on the proper exercise of jurisdiction under Sections 436, 436A, 437, and 439 of the Code of Criminal Procedure, 1973. The Court's concern arose from the systemic failure of trial courts and High Courts to apply the principle that personal liberty — a right guaranteed under Article 21 of the Constitution — cannot be curtailed as a matter of routine or as a substitute for punishment at the pre-trial stage.<br/><br/>
+          The Court categorised offences into four groups based on the severity of the prescribed punishment, and directed that courts must first determine which category the accused falls in before applying the relevant bail standard. For offences not punishable with death or life imprisonment, the Court held that bail ought ordinarily to be granted unless specific, articulable reasons point to flight risk, tampering of evidence, or danger to public order — and not merely because the prosecution opposes.<br/><br/>
+          Crucially, the Court reiterated that the filing of a charge sheet does not extinguish the bail court's jurisdiction, and that Section 436A — which entitles an undertrial prisoner to bail upon serving one-half of the maximum sentence — must be implemented proactively, including suo motu by prison authorities.
+        </div>
+        <div class="if-provisions">
+          <span class="if-prov">Art. 21 Constitution</span>
+          <span class="if-prov">S. 436 CrPC</span>
+          <span class="if-prov">S. 436A CrPC</span>
+          <span class="if-prov">S. 437 CrPC</span>
+          <span class="if-prov">S. 439 CrPC</span>
+        </div>
+        <span class="if-read">Read Full Analysis</span>
+      </div>
+
+      <!-- CARD 1 -->
+      <div class="insight-card">
+        <span class="ic-tag">Arrest · Procedure</span>
+        <div class="ic-date">17 May 2025</div>
+        <h3 class="ic-title">Arrest Is Not a Foregone Conclusion — Section 41 Imposes a Reasoned Threshold</h3>
+        <div class="ic-citation">Arnesh Kumar v. State of Bihar &amp; Anr. — (2014) 8 SCC 273</div>
+        <div class="ic-body">
+          The Supreme Court, confronted with the widespread misuse of the power of arrest — particularly in matrimonial matters under Section 498-A IPC — laid down binding directions requiring every police officer to apply his mind to the conditions specified in Section 41(1)(b) CrPC before effecting an arrest in cases where the maximum sentence does not exceed seven years.<br/><br/>
+          The Court held that the police officer must record, in writing, his reasons for concluding that arrest is necessary to prevent further offence, to ensure proper investigation, or to prevent the accused from absconding. Magistrates were directed not to authorise detention mechanically and to satisfy themselves, from the reasons recorded, that the conditions for arrest were in fact met. Non-compliance was held to render the arrest illegal and to expose the officer to departmental and legal consequences.
+        </div>
+        <div class="ic-provisions">
+          <span class="ic-prov">S. 41 CrPC</span>
+          <span class="ic-prov">S. 41A CrPC</span>
+          <span class="ic-prov">S. 498-A IPC</span>
+          <span class="ic-prov">Art. 21 Constitution</span>
+        </div>
+        <span class="ic-read">Read Full Analysis</span>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="insight-card">
+        <span class="ic-tag">NDPS · Bail</span>
+        <div class="ic-date">13 May 2025</div>
+        <h3 class="ic-title">The Twin Conditions Under Section 37 NDPS Are Mandatory — Reasonable Grounds Must Be Recorded</h3>
+        <div class="ic-citation">Union of India v. Rattan Mallik @ Habul — (2009) 2 SCC 624</div>
+        <div class="ic-body">
+          The Supreme Court authoritatively construed Section 37 of the Narcotic Drugs and Psychotropic Substances Act, 1985, which imposes a non-obstante bar on the grant of bail in commercial quantity cases. The Court held that the two conditions imposed by Section 37(1)(b) are conjunctive and mandatory: the court must first afford the prosecution an opportunity of hearing, and must then form a positive, reasoned satisfaction — not a mere tentative view — that there are reasonable grounds to believe that the accused is not guilty of the alleged offence, and that he is unlikely to commit any offence whilst on bail.<br/><br/>
+          The Court cautioned that these conditions operate as a departure from the general bail jurisprudence and cannot be diluted by recourse to general principles under Sections 437 or 439 CrPC. The word "reasonable grounds" was interpreted to mean something more than a prima facie case — the court must weigh the evidence on record with a degree of seriousness approximating a trial.
+        </div>
+        <div class="ic-provisions">
+          <span class="ic-prov">S. 37 NDPS Act</span>
+          <span class="ic-prov">S. 20 NDPS Act</span>
+          <span class="ic-prov">S. 437 CrPC</span>
+          <span class="ic-prov">S. 439 CrPC</span>
+        </div>
+        <span class="ic-read">Read Full Analysis</span>
+      </div>
+
+    </div><!-- end .insights-layout -->
+
+    <!-- Lower grid: three cards -->
+    <div class="insights-grid-lower reveal">
+
+      <div class="insight-card">
+        <span class="ic-tag">Circumstantial Evidence</span>
+        <div class="ic-date">10 May 2025</div>
+        <h3 class="ic-title">Five Conditions for Conviction on Circumstantial Evidence — The Panchsheel Still Governs</h3>
+        <div class="ic-citation">Sharad Birdhichand Sarda v. State of Maharashtra — (1984) 4 SCC 116</div>
+        <div class="ic-body">
+          In a prosecution for murder where the case rested entirely on circumstantial evidence, the Supreme Court distilled the governing standard into five conditions — now universally cited as the "Panchsheel of Circumstantial Evidence" — each of which must be individually satisfied before a conviction can be sustained. The circumstances relied upon must be fully established; consistent with the guilt of the accused; conclusive in nature; inconsistent with any other hypothesis of innocence; and collectively of such cogency as to exclude every reasonable doubt.<br/><br/>
+          The Court emphasised that the standard for conviction on circumstantial evidence is not merely that the evidence is consistent with guilt, but that it is inconsistent with any other rational conclusion. A chain of circumstances with a missing link cannot ground a conviction, however suspicious the accused's conduct may appear.
+        </div>
+        <div class="ic-provisions">
+          <span class="ic-prov">S. 302 IPC</span>
+          <span class="ic-prov">S. 3 Evidence Act</span>
+          <span class="ic-prov">S. 106 Evidence Act</span>
+        </div>
+        <span class="ic-read">Read Full Analysis</span>
+      </div>
+
+      <div class="insight-card">
+        <span class="ic-tag">Death Penalty · Sentencing</span>
+        <div class="ic-date">7 May 2025</div>
+        <h3 class="ic-title">Mitigating Circumstances Cannot Be Brushed Aside — Death Must Remain the Rarest of Rare</h3>
+        <div class="ic-citation">Manoj &amp; Ors. v. State of Madhya Pradesh — (2023) 2 SCC 353</div>
+        <div class="ic-body">
+          Exercising its jurisdiction under Article 136 of the Constitution, the Supreme Court set aside death sentences awarded by the trial court and confirmed by the High Court in a case involving the murder of three members of a family. The Court found that neither the trial court nor the High Court had conducted a proper sentencing hearing in accordance with the guidelines laid down in Bachan Singh v. State of Punjab (1980), and had failed to obtain a report from the prison authorities on the accused's conduct, their socio-economic background, or the possibility of reform.<br/><br/>
+          The Court reaffirmed that sentencing in capital cases is a bifurcated exercise: the court must balance aggravating circumstances against mitigating ones, giving the accused a full and meaningful opportunity to place mitigating material on record. The mere brutality of the offence, without a finding that the accused are beyond reformation, cannot make the case "rarest of rare."
+        </div>
+        <div class="ic-provisions">
+          <span class="ic-prov">S. 302 IPC</span>
+          <span class="ic-prov">S. 354(3) CrPC</span>
+          <span class="ic-prov">Art. 21 Constitution</span>
+          <span class="ic-prov">Art. 136 Constitution</span>
+        </div>
+        <span class="ic-read">Read Full Analysis</span>
+      </div>
+
+      <div class="insight-card">
+        <span class="ic-tag">Default Bail · S.167 CrPC</span>
+        <div class="ic-date">4 May 2025</div>
+        <h3 class="ic-title">Default Bail Is an Indefeasible Right — Filing an Incomplete Charge Sheet Does Not Defeat It</h3>
+        <div class="ic-citation">M. Ravindran v. Intelligence Officer, Directorate of Revenue Intelligence — (2021) 2 SCC 485</div>
+        <div class="ic-body">
+          The Supreme Court held that the right to default bail under the proviso to Section 167(2) CrPC is an indefeasible right that accrues the moment the statutory period for filing a charge sheet expires — sixty days for offences punishable with death, life imprisonment or imprisonment for ten years or more; ninety days for all other offences. Once the right accrues and is exercised by way of an application, it cannot be extinguished by the subsequent filing of a charge sheet, even if filed before the court takes up the application.<br/><br/>
+          The Court further held that the prosecution cannot defeat the right by filing a "preliminary" or "incomplete" charge sheet merely to forestall the accrual of the right. A charge sheet filed without the essential documents and materials required by law does not constitute a valid charge sheet for the purpose of Section 167(2), and the right to default bail survives.
+        </div>
+        <div class="ic-provisions">
+          <span class="ic-prov">S. 167(2) CrPC</span>
+          <span class="ic-prov">S. 173 CrPC</span>
+          <span class="ic-prov">Art. 21 Constitution</span>
+        </div>
+        <span class="ic-read">Read Full Analysis</span>
+      </div>
+
+    </div><!-- end .insights-grid-lower -->
+
+    <div class="insights-note reveal">
+      <strong>Published every Tuesday and Friday.</strong> This column covers significant Supreme Court decisions in criminal law — bail jurisprudence, evidence, sentencing, and procedure. Each entry is prepared by Abhayjeet Singh Rao and is intended for informational purposes only. Nothing published here constitutes legal advice.
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="section-hd">
+      <span class="eyebrow reveal">Get in Touch</span>
+      <h2 class="section-h reveal">Contact</h2>
+      <div class="section-rule reveal"></div>
+      <p class="section-lead reveal">For case enquiries, consultations, or international commercial advisory, reach out through the form or via the details below.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="reveal d1">
+          <div class="ci-label">Location</div>
+          <div class="ci-value">New Delhi, India</div>
+        </div>
+        <div class="reveal d2">
+          <div class="ci-label">Email</div>
+          <div class="ci-value"><a href="mailto:abhayjeetrao@gmail.com">abhayjeetrao@gmail.com</a></div>
+        </div>
+        <div class="reveal d3">
+          <div class="ci-label">Phone</div>
+          <div class="ci-value"><a href="tel:+919654400709">+91 96544 00709</a></div>
+        </div>
+        <div class="reveal d4">
+          <div class="ci-label">Office Hours</div>
+          <div class="ci-value">Monday – Friday · 10 AM – 6 PM IST</div>
+        </div>
+        <div class="wa-block reveal d5">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <div class="wa-block-text">
+            <strong>Chat on WhatsApp</strong>
+            <span>Typically responds within a few hours</span>
+          </div>
+          <a class="wa-block-btn" href="https://wa.me/919654400709?text=Hello%2C%20I%20would%20like%20to%20consult%20with%20you%20regarding%20a%20legal%20matter." target="_blank" rel="noopener">Start Chat</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="fname">Full Name</label>
+            <input class="form-input" id="fname" type="text" placeholder="Your name" required/>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="femail">Email Address</label>
+            <input class="form-input" id="femail" type="email" placeholder="your@email.com" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="fsubject">Subject</label>
+          <input class="form-input" id="fsubject" type="text" placeholder="Brief description of your matter"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="fmsg">Message</label>
+          <textarea class="form-textarea" id="fmsg" placeholder="Please describe your legal matter briefly…" required></textarea>
+        </div>
+        <div class="form-ok" id="formOk">Your message has been received. I will respond within 2 business days.</div>
+        <button type="submit" class="form-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand-col">
+      <div class="footer-brand-name">Abhayjeet Singh Rao</div>
+      <div class="footer-brand-sub">Advocate &amp; Solicitor</div>
+      <div class="footer-brand-desc">Practising advocate with over ten years of experience across Indian courts and international commercial practice.</div>
+    </div>
+    <div class="footer-links-col">
+      <div class="footer-col-hd">Practice</div>
+      <a href="#practice">Criminal Defence</a>
+      <a href="#practice">Corporate &amp; Commercial</a>
+      <a href="#practice">Aviation Finance</a>
+      <a href="#practice">Family Law</a>
+      <a href="#practice">Real Estate</a>
+    </div>
+    <div class="footer-links-col">
+      <div class="footer-col-hd">About</div>
+      <a href="#about">Profile</a>
+      <a href="#mandates">History of Mandates</a>
+      <a href="#education">Education</a>
+      <a href="#insights">Insights</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-links-col">
+      <div class="footer-col-hd">Contact</div>
+      <a href="mailto:abhayjeetrao@gmail.com">abhayjeetrao@gmail.com</a>
+      <a href="tel:+919654400709">+91 96544 00709</a>
+      <a href="#">New Delhi, India</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Abhayjeet Singh Rao · All Rights Reserved</span>
+    <span style="text-transform:uppercase;letter-spacing:.1em;">Advocate &amp; Solicitor · New Delhi</span>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu(){
+    document.getElementById('navToggle').classList.toggle('open');
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  function closeMenu(){
+    document.getElementById('navToggle').classList.remove('open');
+    document.getElementById('navLinks').classList.remove('open');
+  }
+
+  /* Scroll reveal */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.07});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* Expertise strip active */
+  document.querySelectorAll('.es-item').forEach(el => {
+    el.addEventListener('click', function(){
+      document.querySelectorAll('.es-item').forEach(e => e.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+
+  /* Contact form */
+  function handleSubmit(e){
+    e.preventDefault();
+    document.getElementById('formOk').style.display = 'block';
+    e.target.querySelectorAll('input,textarea,button').forEach(el => el.disabled = true);
+  }
+</script>
+</body>
+</html>
