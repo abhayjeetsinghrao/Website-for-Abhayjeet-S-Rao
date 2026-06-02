@@ -1604,12 +1604,12 @@
         <div class="form-group">
           <label>Urgency</label>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px;">
-            <label style="display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid #E5E7EB;cursor:pointer;">
+            <label class="dd-urgency-opt" id="dd-std" style="display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:2px solid var(--navy);background:var(--navy);cursor:pointer;">
               <input type="radio" name="urgency" value="Standard" checked style="display:none;">
-              <span style="font-size:.8rem;font-weight:500;color:var(--navy);">Standard</span>
-              <span style="font-size:.7rem;color:var(--mid);font-weight:300;">5 – 7 working days</span>
+              <span style="font-size:.8rem;font-weight:500;color:#fff;">Standard</span>
+              <span style="font-size:.7rem;color:rgba(255,255,255,.65);font-weight:300;">5 – 7 working days</span>
             </label>
-            <label style="display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid #E5E7EB;cursor:pointer;">
+            <label class="dd-urgency-opt" id="dd-urg" style="display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid #E5E7EB;cursor:pointer;">
               <input type="radio" name="urgency" value="Urgent" style="display:none;">
               <span style="font-size:.8rem;font-weight:500;color:var(--navy);">Urgent</span>
               <span style="font-size:.7rem;color:var(--mid);font-weight:300;">Within 48 hours</span>
@@ -1899,6 +1899,29 @@
       alert('Network error. Please email directly at abhayjeetrao@gmail.com');
     }
   }
+
+  // DraftDesk urgency toggle
+  document.querySelectorAll('input[name="urgency"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var std = document.getElementById('dd-std');
+      var urg = document.getElementById('dd-urg');
+      if (this.value === 'Standard') {
+        std.style.cssText = 'display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:2px solid var(--navy);background:var(--navy);cursor:pointer;';
+        std.querySelectorAll('span')[0].style.color = '#fff';
+        std.querySelectorAll('span')[1].style.color = 'rgba(255,255,255,.65)';
+        urg.style.cssText = 'display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid #E5E7EB;background:#fff;cursor:pointer;';
+        urg.querySelectorAll('span')[0].style.color = 'var(--navy)';
+        urg.querySelectorAll('span')[1].style.color = '#6B7280';
+      } else {
+        urg.style.cssText = 'display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:2px solid var(--navy);background:var(--navy);cursor:pointer;';
+        urg.querySelectorAll('span')[0].style.color = '#fff';
+        urg.querySelectorAll('span')[1].style.color = 'rgba(255,255,255,.65)';
+        std.style.cssText = 'display:flex;flex-direction:column;gap:3px;padding:14px 16px;border:1px solid #E5E7EB;background:#fff;cursor:pointer;';
+        std.querySelectorAll('span')[0].style.color = 'var(--navy)';
+        std.querySelectorAll('span')[1].style.color = '#6B7280';
+      }
+    });
+  });
 </script>
 </body>
 </html>
