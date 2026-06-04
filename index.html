@@ -124,6 +124,7 @@
     ]
   }
   </script>
+  <script type="application/ld+json" id="insights-schema"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -1841,6 +1842,40 @@
     }
     counterObserver.observe(el);
   });
+
+  /* ── Insights Article Schema — auto-generated for SEO ── */
+  (function(){
+    const articles = [];
+    document.querySelectorAll('.insight-card, .insight-featured').forEach(function(card, i){
+      const title   = card.querySelector('.ic-title, .if-title');
+      const date    = card.querySelector('.ic-date, .if-date');
+      const body    = card.querySelector('.ic-body, .if-body');
+      const cite    = card.querySelector('.ic-citation, .if-citation');
+      if(!title) return;
+      articles.push({
+        "@type": "Article",
+        "@id": "https://officeofabhayjeetsinghrao.com/#insight-" + i,
+        "headline": title.textContent.trim(),
+        "datePublished": date ? date.textContent.trim() : "",
+        "description": body ? body.textContent.trim().slice(0, 200) : "",
+        "about": cite ? cite.textContent.trim() : "",
+        "author": {
+          "@type": "Person",
+          "name": "Abhayjeet Singh Rao",
+          "url": "https://officeofabhayjeetsinghrao.com"
+        },
+        "publisher": {
+          "@type": "Person",
+          "name": "Abhayjeet Singh Rao",
+          "url": "https://officeofabhayjeetsinghrao.com"
+        },
+        "mainEntityOfPage": "https://officeofabhayjeetsinghrao.com/#insights",
+        "keywords": "Supreme Court India, criminal law, bail, CrPC, IPC"
+      });
+    });
+    const schema = { "@context": "https://schema.org", "@graph": articles };
+    document.getElementById('insights-schema').textContent = JSON.stringify(schema);
+  })();
 
   /* ── Mandates filter ── */
   function filterMandates(cat, btn) {
