@@ -126,6 +126,21 @@
   }
   </script>
   <script type="application/ld+json" id="insights-schema"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Is bail a matter of right in India?","acceptedAnswer":{"@type":"Answer","text":"For bailable offences, bail is a matter of right. For non-bailable offences, bail is discretionary and decided by the court on the gravity of the offence, flight risk, risk of tampering with evidence, and the accused's antecedents. The Supreme Court has affirmed that bail is the rule and jail is the exception, since personal liberty is protected under Article 21."}},
+      {"@type":"Question","name":"What is anticipatory bail and when can it be sought?","acceptedAnswer":{"@type":"Answer","text":"Anticipatory bail under Section 438 CrPC is a direction to release a person on bail in anticipation of arrest in a non-bailable offence. It may be sought where arrest is apprehended on a false or motivated accusation or where custodial interrogation is not warranted. It can be granted by the Sessions Court or the High Court."}},
+      {"@type":"Question","name":"What happens after an FIR is filed against a person?","acceptedAnswer":{"@type":"Answer","text":"After an FIR is registered for a cognisable offence, the police investigate, record statements, collect evidence, and may effect arrest. The accused may seek anticipatory or regular bail. On completion of investigation the police file a charge sheet or closure report, after which the court may frame charges and proceed to trial or discharge the accused."}},
+      {"@type":"Question","name":"What are the twin conditions for bail under the NDPS Act?","acceptedAnswer":{"@type":"Answer","text":"For commercial quantity offences under the NDPS Act 1985, Section 37 requires the court to be satisfied on reasonable grounds that the accused is not guilty and is unlikely to commit any offence while on bail. These conditions are mandatory and operate as a higher threshold than ordinary CrPC bail."}},
+      {"@type":"Question","name":"Can a cheque dishonour (Section 138) case continue during insolvency?","acceptedAnswer":{"@type":"Answer","text":"Yes, against natural persons. The moratorium under Section 14 IBC protects only the corporate debtor and does not shield directors or signatories from prosecution under Section 138 of the Negotiable Instruments Act. A director who signed the dishonoured cheque remains personally liable."}},
+      {"@type":"Question","name":"What is default bail under Section 167(2) CrPC?","acceptedAnswer":{"@type":"Answer","text":"Default bail is an indefeasible right that accrues when the charge sheet is not filed within the prescribed period — sixty days for most offences and ninety days for offences punishable with death, life imprisonment, or ten years or more. If the accused applies before the charge sheet is filed, the right cannot be defeated by a later or incomplete charge sheet."}},
+      {"@type":"Question","name":"Do RERA protections apply to ongoing real estate projects?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Supreme Court has held that RERA 2016 operates retroactively and applies to ongoing projects required to be registered after the Act came into force. A homebuyer may seek a refund with interest, or interest for delayed possession, under Section 18 at the buyer's option."}}
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
@@ -863,6 +878,28 @@
     }
     .insights-note strong { color:var(--navy); }
 
+    /* ══ FAQ ═════════════════════════════════════════════════ */
+    .faq-list { border-top:1px solid var(--rule); max-width:880px; }
+    .faq-item { border-bottom:1px solid var(--rule); }
+    .faq-item summary {
+      list-style:none; cursor:pointer; padding:1.4rem 0;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:1.5rem;
+      font-size:1rem; font-weight:600; color:var(--navy); line-height:1.45;
+      transition:color var(--t);
+    }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item summary:hover { color:var(--blue); }
+    .faq-item summary::after {
+      content:'+'; flex-shrink:0; font-size:1.4rem; font-weight:400;
+      color:var(--blue); line-height:1; transition:transform var(--t);
+    }
+    .faq-item[open] summary::after { content:'−'; }
+    .faq-answer {
+      padding:0 0 1.5rem; font-size:.9rem; color:var(--mid);
+      line-height:1.85; text-align:justify; max-width:780px;
+    }
+    .faq-answer strong { color:var(--ink); font-weight:600; }
+
     @media(max-width:900px){
       .insights-layout{ grid-template-columns:1fr; }
       .insight-featured{ grid-row:auto; }
@@ -1037,7 +1074,9 @@
     <li><a href="#mandates"  onclick="closeMenu()">Mandates</a></li>
     <li><a href="#education" onclick="closeMenu()">Education</a></li>
     <li><a href="#insights"  onclick="closeMenu()">Insights</a></li>
+    <li><a href="#faq"       onclick="closeMenu()">FAQ</a></li>
     <li><a href="#draftdesk" onclick="closeMenu()">DraftDesk</a></li>
+    <li><a href="/blog/"     onclick="closeMenu()">Blog</a></li>
     <li><a href="#contact"   onclick="closeMenu()" class="nav-cta">Contact</a></li>
   </ul>
   <div class="nav-toggle" id="navToggle" onclick="toggleMenu()">
@@ -1877,9 +1916,51 @@
     </div>
 
     <div class="insights-note reveal">
-      <strong>Published every Tuesday and Friday.</strong> This column covers significant Supreme Court decisions in criminal law — bail jurisprudence, evidence, sentencing, and procedure. Each entry is prepared by Abhayjeet Singh Rao and is intended for informational purposes only. Nothing published here constitutes legal advice.
+      <strong>Updated regularly.</strong> This column covers significant Supreme Court decisions across criminal law, insolvency, arbitration, and real estate — bail jurisprudence, evidence, sentencing, and procedure. Each entry is prepared by Abhayjeet Singh Rao and is intended for informational purposes only. Nothing published here constitutes legal advice.
     </div>
 
+  </div>
+</section>
+
+<!-- ══ FAQ ════════════════════════════════════════════════ -->
+<section id="faq" class="section">
+  <div class="section-inner">
+    <div class="section-hd">
+      <span class="eyebrow reveal">Common Questions</span>
+      <h2 class="section-h reveal">Frequently Asked Questions</h2>
+      <div class="section-rule reveal"></div>
+      <p class="section-lead reveal">General information on questions frequently raised in criminal, commercial, and real estate matters. This is for educational purposes only and does not constitute legal advice.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Is bail a matter of right in India?</summary>
+        <div class="faq-answer">For bailable offences, bail is a matter of right and the police or court must release the accused on furnishing bail. For non-bailable offences, bail is discretionary and is decided by the court on considerations such as the gravity of the offence, the likelihood of the accused absconding, the risk of tampering with evidence or influencing witnesses, and the accused's antecedents. The Supreme Court has repeatedly affirmed that <strong>"bail is the rule and jail is the exception"</strong>, since personal liberty is protected under Article 21 of the Constitution.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What is anticipatory bail and when can it be sought?</summary>
+        <div class="faq-answer">Anticipatory bail, under Section 438 of the Code of Criminal Procedure, is a direction to release a person on bail in anticipation of arrest in a non-bailable offence. It may be sought where a person apprehends arrest on an accusation that may be false or motivated, or where custodial interrogation is not warranted. The court weighs the nature and gravity of the accusation, the antecedents of the applicant, the possibility of flight, and whether the accusation appears intended to injure or humiliate. It can be granted by the Sessions Court or the High Court.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What happens after an FIR is filed against a person?</summary>
+        <div class="faq-answer">Once a First Information Report is registered for a cognisable offence, the police commence investigation — recording statements, collecting evidence, and, where warranted, effecting arrest. An accused may seek anticipatory bail before arrest, or regular bail after arrest. On completion of investigation, the police file a charge sheet (or a closure report) before the Magistrate. Depending on the material, the court may frame charges and proceed to trial, or discharge the accused. At every stage the accused retains the right to legal representation and to a fair procedure.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What are the twin conditions for bail under the NDPS Act?</summary>
+        <div class="faq-answer">For offences involving commercial quantity under the Narcotic Drugs and Psychotropic Substances Act, 1985, Section 37 imposes two mandatory conditions before bail can be granted. The court must be satisfied, on <strong>reasonable grounds</strong>, that the accused is not guilty of the offence, and that the accused is unlikely to commit any offence while on bail. These conditions are in addition to the ordinary requirements of the CrPC and operate as a higher threshold. The Supreme Court has held that mere absence of contraband on the person of the accused does not dispense with this scrutiny.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can a cheque dishonour (Section 138) case continue during insolvency?</summary>
+        <div class="faq-answer">Yes, in relation to natural persons. The Supreme Court has held that the moratorium under Section 14 of the Insolvency and Bankruptcy Code, 2016 protects only the corporate debtor — it does not shield directors, signatories, or other natural persons from prosecution under Section 138 of the Negotiable Instruments Act, 1881. A director who signed the dishonoured cheque remains personally liable, and the criminal complaint may proceed notwithstanding the company's insolvency.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What is default bail under Section 167(2) CrPC?</summary>
+        <div class="faq-answer">Default bail, also called statutory bail, is an indefeasible right that accrues to an accused when the investigating agency fails to file the charge sheet within the prescribed period — sixty days for most offences, and ninety days for offences punishable with death, life imprisonment, or imprisonment of ten years or more. If the accused applies for bail upon expiry of this period and before the charge sheet is filed, the right cannot be defeated by a subsequently filed or incomplete charge sheet.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Do RERA protections apply to ongoing real estate projects?</summary>
+        <div class="faq-answer">Yes. The Supreme Court has held that the Real Estate (Regulation and Development) Act, 2016 operates <strong>retroactively</strong> and applies to ongoing projects that were required to be registered after the Act came into force. A homebuyer has the right under Section 18 to seek a refund of the amount paid together with interest, or to claim interest for delayed possession, at the buyer's option. This significantly strengthens the position of allottees against defaulting developers.</div>
+      </details>
+    </div>
   </div>
 </section>
 
