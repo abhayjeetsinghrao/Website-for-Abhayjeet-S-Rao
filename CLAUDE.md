@@ -64,22 +64,24 @@ Every insight page must have:
 
 ## Content plan — publishing queue
 
-### Series A — Supreme Court of India (criminal & commercial)
+### Series A — Supreme Court of India (criminal & commercial) — PUBLISHED
 
-Proposed 10-insight schedule (dates TBD, to be published over ~20 days):
+All 10 articles published June 9–18, 2026. Web-search verified before publication.
 
-| # | Case | Topic |
-|---|------|-------|
-| 1 | Lalita Kumari v. Govt. of U.P. — (2014) 2 SCC 1 | FIR mandatory registration, police duty |
-| 2 | Dataram Singh v. State of U.P. — (2018) 3 SCC 22 | Custody vs. arrest distinction, bail |
-| 3 | Toofan Singh v. State of Tamil Nadu — (2021) 4 SCC 1 | NDPS — confessions before customs officers |
-| 4 | Rajnesh v. Neha — (2021) 2 SCC 324 | Interim maintenance — uniform guidelines |
-| 5 | Pioneer Urban Land and Infrastructure Ltd v. Govindan Raghavan — (2019) 5 SCC 725 | IBC — homebuyers as financial creditors |
-| 6 | K. Bhaskaran v. Sankaran Vaidhyan Balan — (1999) 7 SCC 510 | Section 138 NI Act — dishonour of cheque |
-| 7 | Noor Aga v. State of Punjab — (2008) 16 SCC 417 | NDPS — reverse burden of proof |
-| 8 | Swiss Ribbons Pvt. Ltd. v. Union of India — (2019) 4 SCC 17 | IBC constitutional validity |
-| 9 | Siddharth v. State of U.P. — (2022) 1 SCC 676 | Arrest not automatic on filing of charge sheet |
-| 10 | State of Haryana v. Bhajan Lal — 1992 Supp (1) SCC 335 | FIR quashing — seven-category guidelines |
+| # | Slug | Citation | Date |
+|---|------|----------|------|
+| 1 | `lalita-kumari-v-govt-up.html` | Lalita Kumari v. Govt. of U.P. — (2014) 2 SCC 1 | 9 June 2026 |
+| 2 | `dataram-singh-v-state-up.html` | Dataram Singh v. State of U.P. — (2018) 3 SCC 22 | 10 June 2026 |
+| 3 | `toofan-singh-v-state-tamil-nadu.html` | Toofan Singh v. State of Tamil Nadu — (2021) 4 SCC 1 | 11 June 2026 |
+| 4 | `rajnesh-v-neha.html` | Rajnesh v. Neha — (2021) 2 SCC 324 | 12 June 2026 |
+| 5 | `pioneer-urban-land-v-union-india-ibc.html` | Pioneer Urban Land & Infrastructure Ltd. v. Union of India — **(2019) 8 SCC 416** | 13 June 2026 |
+| 6 | `k-bhaskaran-v-sankaran-vaidhyan-balan.html` | K. Bhaskaran v. Sankaran Vaidhyan Balan — (1999) 7 SCC 510 | 14 June 2026 |
+| 7 | `noor-aga-v-state-punjab.html` | Noor Aga v. State of Punjab — (2008) 16 SCC 417 | 15 June 2026 |
+| 8 | `swiss-ribbons-v-union-india.html` | Swiss Ribbons Pvt. Ltd. v. Union of India — (2019) 4 SCC 17 | 16 June 2026 |
+| 9 | `siddharth-v-state-up.html` | Siddharth v. State of U.P. — (2022) 1 SCC 676 | 17 June 2026 |
+| 10 | `state-of-haryana-v-bhajan-lal.html` | State of Haryana v. Bhajan Lal — 1992 Supp (1) SCC 335 | 18 June 2026 |
+
+**Notes:** Case #5 corrected from "v. Govindan Raghavan (2019) 5 SCC 725" (consumer protection) to correct IBC homebuyers case: **v. Union of India (2019) 8 SCC 416**. K. Bhaskaran territorial jurisdiction holding noted as overruled by Dashrath Rupsingh Rathod (2014) 9 SCC 129; five-component test survives.
 
 ### Series B — EWHC Commercial Division
 
