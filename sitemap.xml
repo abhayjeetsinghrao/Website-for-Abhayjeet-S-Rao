@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main pages -->
   <url>
     <loc>https://officeofabhayjeetsinghrao.com/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -26,7 +28,7 @@
   </url>
   <url>
     <loc>https://officeofabhayjeetsinghrao.com/#insights</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -36,4 +38,109 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/privacy-policy.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Individual insight pages -->
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/satender-kumar-antil-v-cbi.html</loc>
+    <lastmod>2025-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/arnesh-kumar-v-state-of-bihar.html</loc>
+    <lastmod>2025-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/union-of-india-v-rattan-mallik.html</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/m-ravindran-v-intelligence-officer-dri.html</loc>
+    <lastmod>2025-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/sharad-birdhichand-sarda-v-state-maharashtra.html</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/manoj-v-state-madhya-pradesh.html</loc>
+    <lastmod>2025-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/mohd-arbaz-v-state-nct-delhi.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/union-of-india-ncb-v-md-nawaz-khan.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/ghanashyam-mishra-sons-v-edelweiss.html</loc>
+    <lastmod>2026-06-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/consolidated-construction-consortium-v-hitro-energy.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/ghulam-hassan-beigh-v-mohammad-maqbool-magrey.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/newtech-promoters-v-state-up.html</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/vishnoo-mittal-v-shakti-trading.html</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/p-mohan-raj-v-shah-brothers-ispat.html</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/state-of-kerala-v-rajesh.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/manoharan-v-state.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
