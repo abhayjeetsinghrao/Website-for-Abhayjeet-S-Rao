@@ -21,12 +21,38 @@ f1915e146c4820a15e518a99e72fa175.txt   — IndexNow key
 insights/           — individual SEO pages (one per case)
 ```
 
-## Adding a new insight
+## Adding a new insight — MANDATORY STEPS
 
-1. Create `insights/<slug>.html` — copy any existing insight page as template
-2. Add an insight card to `index.html` at `<!-- inject-newest-here -->` (newest first)
-3. Add the URL to `sitemap.xml`
-4. Commit and push
+### Step 1 — Web-search verification (NON-NEGOTIABLE)
+Before writing or committing any article, verify every factual claim with live
+web search. The script `scripts/verify_insight.py` automates this:
+
+```bash
+# Requires: pip install anthropic && export ANTHROPIC_API_KEY=...
+python3 scripts/verify_insight.py insights/<slug>.html
+```
+
+The script must return **PASS** before the article is committed. A FLAG verdict
+requires all listed corrections to be applied and the script re-run. A FAIL or
+ERROR means the article must not be published.
+
+**For every article, verify manually:**
+- [ ] Case / legal event is real and published
+- [ ] Case number (SCC, UKHL, PCA Case No., EWHC, etc.) is correct
+- [ ] Court and year are correct
+- [ ] Key legal holdings accurately reflect the actual judgment
+- [ ] Statutory provisions cited exist and are correctly named
+
+### Step 2 — Create the HTML page
+Create `insights/<slug>.html` — copy any existing insight page as template.
+
+### Step 3 — Add to index.html
+Add an insight card to `index.html` at `<!-- inject-newest-here -->` (newest first).
+
+### Step 4 — Update sitemap
+Add the URL to `sitemap.xml`.
+
+### Step 5 — Commit and push
 
 Every insight page must have:
 - Unique `<title>`, `<meta name="description">`, `<meta name="keywords">`
@@ -74,7 +100,9 @@ Proposed cases (order TBD):
 
 ### Series C — PCA / International Arbitration (published)
 
-| Slug | Date |
-|------|------|
-| `pakistan-india-indus-waters-pca-arbitration.html` | 8 June 2026 |
-| `india-notice-modify-indus-waters-treaty.html` | 8 June 2026 |
+| Slug | Citation | Date |
+|------|----------|------|
+| `pakistan-india-indus-waters-pca-arbitration.html` | Pakistan v. Republic of India, PCA Case No. 2023-01 — Award on the Competence of the Court, 6 July 2023; Award on Issues of General Interpretation, 8 August 2025 | 8 June 2026 |
+| `india-notice-modify-indus-waters-treaty.html` | India's Notice for Modification of the IWT, 25 January 2023; India's Abeyance Declaration, 23 April 2025 — IWT Art. XII; VCLT Arts. 54, 62 | 8 June 2026 |
+
+**Verification status:** Both articles web-search verified and corrected (6 July 2023 award date confirmed; PCA Case No. 2023-01 confirmed; April 2025 abeyance declaration and August 2025 general interpretation award incorporated).
