@@ -83,22 +83,20 @@ All 10 articles published June 9–18, 2026. Web-search verified before publicat
 
 **Notes:** Case #5 corrected from "v. Govindan Raghavan (2019) 5 SCC 725" (consumer protection) to correct IBC homebuyers case: **v. Union of India (2019) 8 SCC 416**. K. Bhaskaran territorial jurisdiction holding noted as overruled by Dashrath Rupsingh Rathod (2014) 9 SCC 129; five-component test survives.
 
-### Series B — EWHC Commercial Division
+### Series B — English Commercial Law — PUBLISHED
 
-Landmark Commercial Court cases — to be built as a dedicated series on the site, showcasing expertise in English commercial law (aligns with LLM in International Commercial Law, University of Limerick).
+All 8 articles published June 19–26, 2026.
 
-Proposed cases (order TBD):
-
-| # | Case | Topic |
-|---|------|-------|
-| 1 | Fiona Trust & Holding Corp v. Privalov [2007] UKHL 40 | Arbitration clauses — separability and one-stop adjudication |
-| 2 | The Achilleas (Transfield Shipping v. Mercator Shipping) [2008] UKHL 48 | Remoteness of damage — assumption of responsibility |
-| 3 | Singularis Holdings Ltd v. Daiwa Capital Markets Europe Ltd [2019] UKSC 50 | Fraud — attribution of director's knowledge to company |
-| 4 | VTB Capital plc v. Nutritek International Corp [2013] UKSC 5 | Jurisdiction — piercing the corporate veil |
-| 5 | Mareva Compania Naviera SA v. International Bulkcarriers SA [1975] 2 Lloyd's Rep 509 | Freezing injunctions — origins of the Mareva order |
-| 6 | Raiffeisen Zentralbank Osterreich AG v. Royal Bank of Scotland plc [2010] EWHC 1392 | Misrepresentation — reasonable reliance in banking |
-| 7 | Cavendish Square Holding BV v. Makdessi [2015] UKSC 67 | Penalty clauses — rule against penalties recast |
-| 8 | Lehman Brothers International (Europe) (In Administration) [2012] UKSC 6 | Client money — segregation and insolvency waterfall |
+| # | Slug | Citation | Date |
+|---|------|----------|------|
+| 1 | `fiona-trust-v-privalov.html` | Fiona Trust & Holding Corp v. Privalov — [2007] UKHL 40 | 19 June 2026 |
+| 2 | `transfield-shipping-v-mercator-achilleas.html` | Transfield Shipping v. Mercator Shipping (The Achilleas) — [2008] UKHL 48 | 20 June 2026 |
+| 3 | `singularis-holdings-v-daiwa.html` | Singularis Holdings Ltd v. Daiwa Capital Markets Europe Ltd — [2019] UKSC 50 | 21 June 2026 |
+| 4 | `vtb-capital-v-nutritek.html` | VTB Capital plc v. Nutritek International Corp — [2013] UKSC 5 | 22 June 2026 |
+| 5 | `mareva-compania-naviera-v-international-bulkcarriers.html` | Mareva Compania Naviera SA v. International Bulkcarriers SA — [1975] 2 Lloyd's Rep 509 | 23 June 2026 |
+| 6 | `raiffeisen-zentralbank-v-rbs.html` | Raiffeisen Zentralbank Osterreich AG v. Royal Bank of Scotland plc — [2010] EWHC 1392 (Comm) | 24 June 2026 |
+| 7 | `cavendish-square-v-makdessi.html` | Cavendish Square Holding BV v. Makdessi — [2015] UKSC 67 | 25 June 2026 |
+| 8 | `lehman-brothers-international-europe-cass.html` | Lehman Brothers International (Europe) (In Administration) v. CRC Credit Fund Ltd — [2012] UKSC 6 | 26 June 2026 |
 
 ### Series C — PCA / International Arbitration (published)
 
