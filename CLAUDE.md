@@ -109,20 +109,20 @@ All 8 articles published June 19–26, 2026.
 
 ### Series D — Civil Procedure Code (Supreme Court of India) — PUBLISHED
 
-All 8 articles published June 27 – July 4, 2026. Web-search verified 8 July 2026
+All 8 articles published July 1–8, 2026. Web-search verified 8 July 2026
 before generation (verify_insight.py unavailable in remote environment — no
 ANTHROPIC_API_KEY; verification done with live web search per case).
 
 | # | Slug | Citation | Date |
 |---|------|----------|------|
-| 1 | `dalpat-kumar-v-prahlad-singh.html` | Dalpat Kumar v. Prahlad Singh — (1992) 1 SCC 719 | 27 June 2026 |
-| 2 | `wander-v-antox-india.html` | Wander Ltd. v. Antox India P. Ltd. — 1990 Supp SCC 727 | 28 June 2026 |
-| 3 | `satyadhyan-ghosal-v-deorajin-debi.html` | Satyadhyan Ghosal v. Sm. Deorajin Debi — AIR 1960 SC 941 | 29 June 2026 |
-| 4 | `state-of-up-v-nawab-hussain.html` | State of U.P. v. Nawab Hussain — (1977) 2 SCC 806 | 30 June 2026 |
-| 5 | `saleem-bhai-v-state-maharashtra.html` | Saleem Bhai v. State of Maharashtra — (2003) 1 SCC 557 | 1 July 2026 |
-| 6 | `rahul-s-shah-v-jinendra-kumar-gandhi.html` | Rahul S. Shah v. Jinendra Kumar Gandhi — (2021) 6 SCC 418 | 2 July 2026 |
-| 7 | `ramrameshwari-devi-v-nirmala-devi.html` | Ramrameshwari Devi v. Nirmala Devi — (2011) 8 SCC 249 | 3 July 2026 |
-| 8 | `scg-contracts-v-ks-chamankar-infrastructure.html` | SCG Contracts India Pvt. Ltd. v. K.S. Chamankar Infrastructure Pvt. Ltd. — (2019) 12 SCC 210 | 4 July 2026 |
+| 1 | `dalpat-kumar-v-prahlad-singh.html` | Dalpat Kumar v. Prahlad Singh — (1992) 1 SCC 719 | 1 July 2026 |
+| 2 | `wander-v-antox-india.html` | Wander Ltd. v. Antox India P. Ltd. — 1990 Supp SCC 727 | 2 July 2026 |
+| 3 | `satyadhyan-ghosal-v-deorajin-debi.html` | Satyadhyan Ghosal v. Sm. Deorajin Debi — AIR 1960 SC 941 | 3 July 2026 |
+| 4 | `state-of-up-v-nawab-hussain.html` | State of U.P. v. Nawab Hussain — (1977) 2 SCC 806 | 4 July 2026 |
+| 5 | `saleem-bhai-v-state-maharashtra.html` | Saleem Bhai v. State of Maharashtra — (2003) 1 SCC 557 | 5 July 2026 |
+| 6 | `rahul-s-shah-v-jinendra-kumar-gandhi.html` | Rahul S. Shah v. Jinendra Kumar Gandhi — (2021) 6 SCC 418 | 6 July 2026 |
+| 7 | `ramrameshwari-devi-v-nirmala-devi.html` | Ramrameshwari Devi v. Nirmala Devi — (2011) 8 SCC 249 | 7 July 2026 |
+| 8 | `scg-contracts-v-ks-chamankar-infrastructure.html` | SCG Contracts India Pvt. Ltd. v. K.S. Chamankar Infrastructure Pvt. Ltd. — (2019) 12 SCC 210 | 8 July 2026 |
 
 **Notes:** Hub page has a `#civil-procedure` section (site now 44 articles / 6
 practice areas — hero stats and meta counts updated site-wide). Wander & Antox
