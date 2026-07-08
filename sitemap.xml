@@ -4,7 +4,7 @@
   <!-- Main pages -->
   <url>
     <loc>https://officeofabhayjeetsinghrao.com/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -233,8 +233,56 @@
     <priority>0.85</priority>
   </url>
   <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/dalpat-kumar-v-prahlad-singh.html</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/wander-v-antox-india.html</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/satyadhyan-ghosal-v-deorajin-debi.html</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/state-of-up-v-nawab-hussain.html</loc>
+    <lastmod>2026-07-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/saleem-bhai-v-state-maharashtra.html</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/rahul-s-shah-v-jinendra-kumar-gandhi.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/ramrameshwari-devi-v-nirmala-devi.html</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/scg-contracts-v-ks-chamankar-infrastructure.html</loc>
+    <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://officeofabhayjeetsinghrao.com/insights/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>

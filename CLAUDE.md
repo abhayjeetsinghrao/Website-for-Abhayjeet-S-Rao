@@ -106,3 +106,25 @@ All 8 articles published June 19–26, 2026.
 | `india-notice-modify-indus-waters-treaty.html` | India's Notice for Modification of the IWT, 25 January 2023; India's Abeyance Declaration, 23 April 2025 — IWT Art. XII; VCLT Arts. 54, 62 | 8 June 2026 |
 
 **Verification status:** Both articles web-search verified and corrected (6 July 2023 award date confirmed; PCA Case No. 2023-01 confirmed; April 2025 abeyance declaration and August 2025 general interpretation award incorporated).
+
+### Series D — Civil Procedure Code (Supreme Court of India) — PUBLISHED
+
+All 8 articles published July 1–8, 2026. Web-search verified 8 July 2026
+before generation (verify_insight.py unavailable in remote environment — no
+ANTHROPIC_API_KEY; verification done with live web search per case).
+
+| # | Slug | Citation | Date |
+|---|------|----------|------|
+| 1 | `dalpat-kumar-v-prahlad-singh.html` | Dalpat Kumar v. Prahlad Singh — (1992) 1 SCC 719 | 1 July 2026 |
+| 2 | `wander-v-antox-india.html` | Wander Ltd. v. Antox India P. Ltd. — 1990 Supp SCC 727 | 2 July 2026 |
+| 3 | `satyadhyan-ghosal-v-deorajin-debi.html` | Satyadhyan Ghosal v. Sm. Deorajin Debi — AIR 1960 SC 941 | 3 July 2026 |
+| 4 | `state-of-up-v-nawab-hussain.html` | State of U.P. v. Nawab Hussain — (1977) 2 SCC 806 | 4 July 2026 |
+| 5 | `saleem-bhai-v-state-maharashtra.html` | Saleem Bhai v. State of Maharashtra — (2003) 1 SCC 557 | 5 July 2026 |
+| 6 | `rahul-s-shah-v-jinendra-kumar-gandhi.html` | Rahul S. Shah v. Jinendra Kumar Gandhi — (2021) 6 SCC 418 | 6 July 2026 |
+| 7 | `ramrameshwari-devi-v-nirmala-devi.html` | Ramrameshwari Devi v. Nirmala Devi — (2011) 8 SCC 249 | 7 July 2026 |
+| 8 | `scg-contracts-v-ks-chamankar-infrastructure.html` | SCG Contracts India Pvt. Ltd. v. K.S. Chamankar Infrastructure Pvt. Ltd. — (2019) 12 SCC 210 | 8 July 2026 |
+
+**Notes:** Hub page has a `#civil-procedure` section (site now 44 articles / 6
+practice areas — hero stats and meta counts updated site-wide). Wander & Antox
+citation format is `1990 Supp SCC 727` (no parentheses year). Satyadhyan Ghosal
+predates SCC — AIR citation used.
