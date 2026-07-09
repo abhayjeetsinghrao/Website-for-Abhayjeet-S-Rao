@@ -128,3 +128,10 @@ ANTHROPIC_API_KEY; verification done with live web search per case).
 practice areas — hero stats and meta counts updated site-wide). Wander & Antox
 citation format is `1990 Supp SCC 727` (no parentheses year). Satyadhyan Ghosal
 predates SCC — AIR citation used.
+
+**Template gotcha (fixed 8 July 2026):** the hero block of insight pages uses
+LITERAL `—` and `·` characters, not `&mdash;`/`&middot;` entities. A generator
+doing string-replace against entity forms will silently fail and leave the
+template page's tag/H1/citation on every generated page. After generating,
+always verify the `<h1 class="art-title">` and `<div class="art-citation">` of
+each page — not just `<title>` and JSON-LD.
