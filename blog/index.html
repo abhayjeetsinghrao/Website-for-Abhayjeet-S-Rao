@@ -484,5 +484,43 @@
   </div>
 </footer>
 
+
+<style>
+.disclaimer-overlay{position:fixed;inset:0;background:rgba(0,10,30,.92);z-index:9999;display:none;align-items:center;justify-content:center;padding:1.5rem;}
+.disclaimer-modal{background:#FFFFFF;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;padding:2.5rem;}
+.disclaimer-modal-eyebrow{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:#888888;margin-bottom:.5rem;}
+.disclaimer-modal-title{font-size:1.2rem;font-weight:700;color:#001E62;margin-bottom:1.5rem;line-height:1.3;}
+.disclaimer-modal-body p{font-size:.82rem;line-height:1.8;color:#555555;margin-bottom:1rem;}
+.disclaimer-modal-rule{height:1px;background:#D8DCE6;margin:1.5rem 0;}
+.disclaimer-modal-note{font-size:.72rem;color:#888888;line-height:1.7;margin-bottom:1.2rem;}
+.disclaimer-agree-btn{display:inline-flex;align-items:center;background:#001E62;color:#FFFFFF;padding:.75rem 2rem;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;border:none;cursor:pointer;font-family:inherit;transition:background .25s;}
+.disclaimer-agree-btn:hover{background:#002B8A;}
+</style>
+<div class="disclaimer-overlay" id="disclaimerOverlay">
+  <div class="disclaimer-modal">
+    <div class="disclaimer-modal-eyebrow">Important Notice</div>
+    <div class="disclaimer-modal-title">Bar Council of India &mdash; Disclaimer</div>
+    <div class="disclaimer-modal-body">
+      <p>This website has been designed only for the purposes of dissemination of basic information on Abhayjeet Singh Rao and is not an attempt to advertise or solicit clients. It does not seek to create or invite any lawyer&ndash;client relationship.</p>
+      <p>Under the <strong>Bar Council of India Rules, 1964</strong>, advocates in India are not permitted to advertise or solicit work. By agreeing to proceed, you acknowledge that you are seeking information of your own accord.</p>
+    </div>
+    <div class="disclaimer-modal-rule"></div>
+    <div class="disclaimer-modal-footer">
+      <p class="disclaimer-modal-note">By clicking &ldquo;I Agree &amp; Proceed&rdquo;, you confirm that you have read and understood this notice.</p>
+      <button class="disclaimer-agree-btn" onclick="agreeDisclaimer()">I Agree &amp; Proceed</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var o=document.getElementById('disclaimerOverlay');
+  if(o&&!sessionStorage.getItem('disclaimerAgreed')){o.style.display='flex';}
+})();
+function agreeDisclaimer(){
+  sessionStorage.setItem('disclaimerAgreed','1');
+  var o=document.getElementById('disclaimerOverlay');
+  if(o){o.style.display='none';}
+}
+</script>
 </body>
 </html>
