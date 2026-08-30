@@ -135,3 +135,42 @@ doing string-replace against entity forms will silently fail and leave the
 template page's tag/H1/citation on every generated page. After generating,
 always verify the `<h1 class="art-title">` and `<div class="art-citation">` of
 each page — not just `<title>` and JSON-LD.
+
+### Series E — Constitutional Law & Writs (Supreme Court of India) — PUBLISHED
+
+All 8 articles published August 23–30, 2026. Web-search verified 30 August 2026
+before generation (verify_insight.py unavailable in remote environment — no
+ANTHROPIC_API_KEY; verification done with live web search per case).
+
+| # | Slug | Citation | Date |
+|---|------|----------|------|
+| 1 | `kesavananda-bharati-v-state-kerala.html` | Kesavananda Bharati v. State of Kerala — (1973) 4 SCC 225 | 23 Aug 2026 |
+| 2 | `maneka-gandhi-v-union-india.html` | Maneka Gandhi v. Union of India — (1978) 1 SCC 248 | 24 Aug 2026 |
+| 3 | `ep-royappa-v-state-tamil-nadu.html` | E.P. Royappa v. State of Tamil Nadu — (1974) 4 SCC 3 | 25 Aug 2026 |
+| 4 | `dk-basu-v-state-west-bengal.html` | D.K. Basu v. State of West Bengal — (1997) 1 SCC 416 | 26 Aug 2026 |
+| 5 | `sr-bommai-v-union-india.html` | S.R. Bommai v. Union of India — (1994) 3 SCC 1 | 27 Aug 2026 |
+| 6 | `l-chandra-kumar-v-union-india.html` | L. Chandra Kumar v. Union of India — (1997) 3 SCC 261 | 28 Aug 2026 |
+| 7 | `shreya-singhal-v-union-india.html` | Shreya Singhal v. Union of India — (2015) 5 SCC 1 | 29 Aug 2026 |
+| 8 | `ks-puttaswamy-v-union-india.html` | K.S. Puttaswamy (Retd.) v. Union of India — (2017) 10 SCC 1 | 30 Aug 2026 |
+
+**Notes:** Hub page has a `#constitutional-law` section (site now 52 articles /
+7 practice areas — hero stats and meta counts updated site-wide). D.K. Basu's
+guidelines judgment of 18 Dec 1996 is `(1997) 1 SCC 416`; a later order in the
+same matter carries a different citation, so do not conflate them. Puttaswamy
+expressly overruled M.P. Sharma and Kharak Singh; the ADM Jabalpur majority was
+held seriously flawed and overruled in the plurality opinion — phrase that
+distinction carefully. Shreya Singhal struck down s. 66A but **upheld** s. 69A
+and only **read down** s. 79.
+
+**Generator lesson applied:** `gen_series_e.py` asserts on every hero
+replacement (`assert html.count(old) == 1`), so a missed anchor fails the run
+instead of shipping template text. Reuse that pattern for future series.
+
+## Blog section (`blog/`, 37 posts, added PR #8)
+
+Separate from `insights/`. Audited 30 August 2026 (PR #11) — three defects found
+and fixed: BCI disclaimer was missing from all 37 pages, one page had an `<a>`
+tag inside JSON-LD breaking the whole block, and 21 pages had nested `<a>` tags
+in related-article cards. **Any new blog post must carry the BCI disclaimer
+modal**, keep JSON-LD values plain-text, and never nest an anchor inside the
+outer card link.

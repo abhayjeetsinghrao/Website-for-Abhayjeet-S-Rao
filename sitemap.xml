@@ -4,7 +4,7 @@
   <!-- Main pages -->
   <url>
     <loc>https://officeofabhayjeetsinghrao.com/</loc>
-    <lastmod>2026-07-08</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -277,6 +277,54 @@
   <url>
     <loc>https://officeofabhayjeetsinghrao.com/insights/scg-contracts-v-ks-chamankar-infrastructure.html</loc>
     <lastmod>2026-07-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/kesavananda-bharati-v-state-kerala.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/maneka-gandhi-v-union-india.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/ep-royappa-v-state-tamil-nadu.html</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/dk-basu-v-state-west-bengal.html</loc>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/sr-bommai-v-union-india.html</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/l-chandra-kumar-v-union-india.html</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/shreya-singhal-v-union-india.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://officeofabhayjeetsinghrao.com/insights/ks-puttaswamy-v-union-india.html</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
